@@ -32,3 +32,6 @@ S:\osu\awp\awp\obj\Debug\awp.csproj.CoreCompileInputs.cache
 S:\osu\awp\awp\obj\Debug\awp.csproj.CopyComplete
 S:\osu\awp\awp\obj\Debug\awp.exe
 S:\osu\awp\awp\obj\Debug\awp.pdb
+S:\osu\awp\awp\obj\Debug\awp.AwpForm.resources
+S:\osu\awp\awp\obj\Debug\awp.LoginForm.resources
+S:\osu\awp\awp\obj\Debug\awp.Close.resources
