@@ -12,9 +12,9 @@ namespace awp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form awp = new AwpForm();
             awp.Show();
+            this.Hide();
         }
     }
 }

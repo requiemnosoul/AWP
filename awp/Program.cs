@@ -16,7 +16,7 @@ namespace awp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AwpForm());
+            Application.Run(new LoginForm());
         }
     }
 }
