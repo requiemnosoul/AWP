@@ -7,14 +7,16 @@ namespace awp
 {
     public class MyDB
     {
-        void connection(string login, string pass, string db)
+        public static MySqlConnection conn;
+        public static void Connection(string serv, string login, string pass, string db)
         {
-            MySqlConnection conn;
-            string myConnectionString = String.Format("server=127.0.0.1;uid={0};pwd={1};database={2}",login,pass,db);
+            string myConnectionString = "server="+serv+";uid="+login+";pwd="+pass+";database="+db;
             try
             {
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
+                MessageBox.Show("Успешно!");
+                //conn.Close();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {

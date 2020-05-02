@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="awp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>bin\Debug\awp.exe</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604">
@@ -101,6 +108,9 @@
       <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Ubiety.Dns.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="XanderUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>bin\Debug\XanderUI.dll</HintPath>
+    </Reference>
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Zstandard.Net.dll</HintPath>
       <Private>True</Private>
@@ -119,17 +129,23 @@
     <Compile Include="CloseForm.Designer.cs">
       <DependentUpon>CloseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucAbout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAbout.Designer.cs">
+      <DependentUpon>ucAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDB.Designer.cs">
+      <DependentUpon>ucDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucMySQL.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucMySQL.Designer.cs">
-      <DependentUpon>ucMySQL.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -140,11 +156,11 @@
     <Compile Include="MyDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucMsSQL.cs">
+    <Compile Include="ucSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMsSQL.Designer.cs">
-      <DependentUpon>ucMsSQL.cs</DependentUpon>
+    <Compile Include="ucSettings.Designer.cs">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AwpForm.resx">
       <DependentUpon>AwpForm.cs</DependentUpon>
@@ -152,11 +168,14 @@
     <EmbeddedResource Include="CloseForm.resx">
       <DependentUpon>CloseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucAbout.resx">
+      <DependentUpon>ucAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDB.resx">
+      <DependentUpon>ucDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucMySQL.resx">
-      <DependentUpon>ucMySQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -170,8 +189,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucMsSQL.resx">
-      <DependentUpon>ucMsSQL.cs</DependentUpon>
+    <EmbeddedResource Include="ucSettings.resx">
+      <DependentUpon>ucSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

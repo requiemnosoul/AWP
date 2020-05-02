@@ -2,7 +2,7 @@
 
 namespace awp
 {
-    partial class ucHome
+    partial class ucSettings
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,12 +33,11 @@ namespace awp
         {
             this.SuspendLayout();
             // 
-            // ucHome
+            // ucSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Name = "ucHome";
+            this.Name = "ucSettings";
             this.ResumeLayout(false);
         }
 

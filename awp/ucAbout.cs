@@ -1,11 +1,10 @@
 ﻿using System.Windows.Forms;
 
-
 namespace awp
 {
-    public partial class ucMySQL : UserControl
+    public partial class ucAbout : UserControl
     {
-        public ucMySQL()
+        public ucAbout()
         {
             InitializeComponent();
         }

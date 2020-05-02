@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,16 +7,13 @@ namespace awp
 {
     public partial class AwpForm : Form
     {
-        private string loginMyDB, passMyDB, nameMyDB;
-
+        private readonly Queue<Button> _currentButton = new Queue<Button>();
         public AwpForm()
         {
             InitializeComponent();
-            var connSQL = new Control []{ new ucMySQL(), new ucMsSQL(), new ucHome() };
             notifyIcon1.Visible = true;
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
-            drawingUC(connSQL);
+            panelMenu.Controls.Add(sidePanel);       
+            sidePanel.BringToFront();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -48,40 +46,49 @@ namespace awp
             this.WndProc(ref m);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = button2.Height;
-            SidePanel.Top = button2.Top;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = button3.Height;
-            SidePanel.Top = button3.Top;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         void drawingUC(Control[] f)
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 this.Controls.Add(f[i]);
                 f[i].Width = 600;
                 f[i].Height = 420;
                 f[i].Left = 200;
                 f[i].Top = 30;
+                f[i].BringToFront();
             }
+        }
+
+        void ActiveButton(Button b, Panel p)
+        {
+            p.Height = b.Height;
+            p.Top = b.Top;
+            p.Visible = true;
+            b.BackColor = this.BackColor;//FromArgb(140,140,140);
+            if (_currentButton.Contains(b)==false)
+                _currentButton.Enqueue(b);
+            if (_currentButton.Count > 1)
+                _currentButton.Dequeue().BackColor = panelMenu.BackColor;
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender as Button, sidePanel);
+        }
+
+        private void dbButton_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender as Button, sidePanel);
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender as Button, sidePanel);
         }
     }
 }

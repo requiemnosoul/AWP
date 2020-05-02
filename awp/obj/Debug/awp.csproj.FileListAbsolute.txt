@@ -36,7 +36,6 @@ S:\osu\awp\awp\obj\Debug\awp.AwpForm.resources
 S:\osu\awp\awp\obj\Debug\awp.LoginForm.resources
 S:\osu\awp\awp\obj\Debug\awp.Close.resources
 X:\awp\awp\bin\Debug\awp.exe.config
-X:\awp\awp\bin\Debug\awp.exe
 X:\awp\awp\bin\Debug\awp.pdb
 X:\awp\awp\bin\Debug\BouncyCastle.Crypto.dll
 X:\awp\awp\bin\Debug\Google.Protobuf.dll
@@ -64,6 +63,8 @@ X:\awp\awp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 X:\awp\awp\obj\Debug\awp.csprojAssemblyReference.cache
 X:\awp\awp\obj\Debug\awp.exe.config
 X:\awp\awp\obj\Debug\awp.AwpForm.resources
+X:\awp\awp\obj\Debug\awp.CloseForm.resources
+X:\awp\awp\obj\Debug\awp.ucHome.resources
 X:\awp\awp\obj\Debug\awp.LoginForm.resources
 X:\awp\awp\obj\Debug\awp.Properties.Resources.resources
 X:\awp\awp\obj\Debug\awp.csproj.GenerateResource.cache
@@ -71,7 +72,7 @@ X:\awp\awp\obj\Debug\awp.csproj.CoreCompileInputs.cache
 X:\awp\awp\obj\Debug\awp.csproj.CopyComplete
 X:\awp\awp\obj\Debug\awp.exe
 X:\awp\awp\obj\Debug\awp.pdb
-X:\awp\awp\obj\Debug\awp.CloseForm.resources
-X:\awp\awp\obj\Debug\awp.ucMySQL.resources
-X:\awp\awp\obj\Debug\awp.ucMsSQL.resources
-X:\awp\awp\obj\Debug\awp.ucHome.resources
+X:\awp\awp\bin\Debug\FontAwesome.Sharp.dll
+X:\awp\awp\obj\Debug\awp.ucSettings.resources
+X:\awp\awp\obj\Debug\awp.ucDB.resources
+X:\awp\awp\obj\Debug\awp.ucAbout.resources
