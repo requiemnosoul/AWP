@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace awp
 {
@@ -18,13 +17,13 @@ namespace awp
             login = textBox3.Text;
             pass = textBox4.Text;
             db = textBox5.Text;
-            MyDB.Connection(serv,login,pass,db);
+            MyDB.Connection(serv, login, pass, db);
+            MessageBox.Show("Ок");
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            MyDB.conn.Close();
-            MessageBox.Show("Disconnect");
+            
         }
     }
 }

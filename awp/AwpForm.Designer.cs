@@ -56,6 +56,8 @@ namespace awp
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon) (resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // contextMenuStrip1
@@ -63,12 +65,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(103, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -88,7 +90,7 @@ namespace awp
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Red;
-            this.sidePanel.Location = new System.Drawing.Point(0, 50);
+            this.sidePanel.Location = new System.Drawing.Point(0, 70);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(5, 50);
             this.sidePanel.TabIndex = 6;
@@ -103,14 +105,13 @@ namespace awp
             this.settingsButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.settingsButton.IconColor = System.Drawing.Color.White;
             this.settingsButton.IconSize = 30;
-            this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.settingsButton.Location = new System.Drawing.Point(0, 150);
+            this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsButton.Location = new System.Drawing.Point(0, 180);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Rotation = 0D;
             this.settingsButton.Size = new System.Drawing.Size(180, 50);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "Settings";
-            this.settingsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
@@ -124,16 +125,16 @@ namespace awp
             this.aboutButton.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.aboutButton.IconColor = System.Drawing.Color.White;
             this.aboutButton.IconSize = 30;
-            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.aboutButton.Location = new System.Drawing.Point(0, 390);
+            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutButton.Location = new System.Drawing.Point(0, 400);
             this.aboutButton.Name = "aboutButton";
             this.aboutButton.Rotation = 0D;
             this.aboutButton.Size = new System.Drawing.Size(180, 50);
             this.aboutButton.TabIndex = 5;
             this.aboutButton.Text = "About";
-            this.aboutButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.aboutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // homeButton
             // 
@@ -144,14 +145,13 @@ namespace awp
             this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.homeButton.IconColor = System.Drawing.Color.White;
             this.homeButton.IconSize = 30;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 50);
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.Location = new System.Drawing.Point(0, 70);
             this.homeButton.Name = "homeButton";
             this.homeButton.Rotation = 0D;
             this.homeButton.Size = new System.Drawing.Size(180, 50);
             this.homeButton.TabIndex = 5;
             this.homeButton.Text = "Home";
-            this.homeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
@@ -165,14 +165,13 @@ namespace awp
             this.dbButton.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.dbButton.IconColor = System.Drawing.Color.White;
             this.dbButton.IconSize = 30;
-            this.dbButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.dbButton.Location = new System.Drawing.Point(0, 100);
+            this.dbButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dbButton.Location = new System.Drawing.Point(0, 120);
             this.dbButton.Name = "dbButton";
             this.dbButton.Rotation = 0D;
             this.dbButton.Size = new System.Drawing.Size(180, 50);
             this.dbButton.TabIndex = 5;
             this.dbButton.Text = "Database";
-            this.dbButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.dbButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dbButton.UseVisualStyleBackColor = true;
             this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
@@ -218,7 +217,9 @@ namespace awp
             // ucDB1
             // 
             this.ucDB1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
+            this.ucDB1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDB1.Location = new System.Drawing.Point(0, 0);
+            this.ucDB1.Margin = new System.Windows.Forms.Padding(2);
             this.ucDB1.Name = "ucDB1";
             this.ucDB1.Size = new System.Drawing.Size(620, 415);
             this.ucDB1.TabIndex = 3;
@@ -228,6 +229,7 @@ namespace awp
             this.ucAbout1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucAbout1.Location = new System.Drawing.Point(0, 0);
+            this.ucAbout1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucAbout1.Name = "ucAbout1";
             this.ucAbout1.Size = new System.Drawing.Size(620, 415);
             this.ucAbout1.TabIndex = 2;
@@ -236,6 +238,7 @@ namespace awp
             // 
             this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucSettings1.Location = new System.Drawing.Point(0, 0);
+            this.ucSettings1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(620, 415);
             this.ucSettings1.TabIndex = 1;
@@ -245,6 +248,7 @@ namespace awp
             this.ucHome1.BackColor = System.Drawing.Color.White;
             this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucHome1.Location = new System.Drawing.Point(0, 0);
+            this.ucHome1.Margin = new System.Windows.Forms.Padding(2);
             this.ucHome1.Name = "ucHome1";
             this.ucHome1.Size = new System.Drawing.Size(620, 415);
             this.ucHome1.TabIndex = 0;
@@ -261,7 +265,7 @@ namespace awp
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(19, 19);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "AwpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AwpForm_MouseDown);

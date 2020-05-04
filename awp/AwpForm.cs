@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace awp
@@ -12,8 +11,9 @@ namespace awp
         {
             InitializeComponent();
             notifyIcon1.Visible = true;
-            panelMenu.Controls.Add(sidePanel);       
+            panelMenu.Controls.Add(sidePanel);
             sidePanel.BringToFront();
+            //TODO add start uc
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -21,7 +21,7 @@ namespace awp
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 Form close = new CloseForm(this);
-                close.Show();
+                close.ShowDialog();
                 e.Cancel = true;
             }
 
@@ -46,25 +46,13 @@ namespace awp
             this.WndProc(ref m);
         }
 
-        void drawingUC(Control[] f)
+        void ActiveButton(Button b, Panel p, UserControl uc)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                this.Controls.Add(f[i]);
-                f[i].Width = 600;
-                f[i].Height = 420;
-                f[i].Left = 200;
-                f[i].Top = 30;
-                f[i].BringToFront();
-            }
-        }
-
-        void ActiveButton(Button b, Panel p)
-        {
+            uc.BringToFront();
             p.Height = b.Height;
             p.Top = b.Top;
             p.Visible = true;
-            b.BackColor = this.BackColor;//FromArgb(140,140,140);
+            b.BackColor = this.BackColor;
             if (_currentButton.Contains(b)==false)
                 _currentButton.Enqueue(b);
             if (_currentButton.Count > 1)
@@ -78,17 +66,22 @@ namespace awp
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel);
+            ActiveButton(sender as Button, sidePanel, ucHome1);
         }
 
         private void dbButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel);
+            ActiveButton(sender as Button, sidePanel, ucDB1);
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel);
+            ActiveButton(sender as Button, sidePanel, ucSettings1);
+        }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender as Button, sidePanel, ucAbout1);
         }
     }
 }

@@ -2,14 +2,14 @@
 
 namespace awp
 {
-    partial class ucHome
+    partial class Close
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -23,7 +23,7 @@ namespace awp
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -31,18 +31,31 @@ namespace awp
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ucHome
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(405, 137);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Close
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ucHome";
-            this.Size = new System.Drawing.Size(620, 415);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Name = "Close";
+            this.Text = "Close";
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button1;
 
         #endregion
     }

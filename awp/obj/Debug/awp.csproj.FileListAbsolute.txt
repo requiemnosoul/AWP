@@ -1,5 +1,4 @@
 S:\osu\awp\awp\bin\Debug\awp.exe.config
-S:\osu\awp\awp\bin\Debug\awp.exe
 S:\osu\awp\awp\bin\Debug\awp.pdb
 S:\osu\awp\awp\bin\Debug\BouncyCastle.Crypto.dll
 S:\osu\awp\awp\bin\Debug\Google.Protobuf.dll
@@ -34,7 +33,6 @@ S:\osu\awp\awp\obj\Debug\awp.exe
 S:\osu\awp\awp\obj\Debug\awp.pdb
 S:\osu\awp\awp\obj\Debug\awp.AwpForm.resources
 S:\osu\awp\awp\obj\Debug\awp.LoginForm.resources
-S:\osu\awp\awp\obj\Debug\awp.Close.resources
 X:\awp\awp\bin\Debug\awp.exe.config
 X:\awp\awp\bin\Debug\awp.pdb
 X:\awp\awp\bin\Debug\BouncyCastle.Crypto.dll
@@ -76,3 +74,9 @@ X:\awp\awp\bin\Debug\FontAwesome.Sharp.dll
 X:\awp\awp\obj\Debug\awp.ucSettings.resources
 X:\awp\awp\obj\Debug\awp.ucDB.resources
 X:\awp\awp\obj\Debug\awp.ucAbout.resources
+S:\osu\awp\awp\bin\Debug\FontAwesome.Sharp.dll
+S:\osu\awp\awp\obj\Debug\awp.CloseForm.resources
+S:\osu\awp\awp\obj\Debug\awp.ucAbout.resources
+S:\osu\awp\awp\obj\Debug\awp.ucDB.resources
+S:\osu\awp\awp\obj\Debug\awp.ucHome.resources
+S:\osu\awp\awp\obj\Debug\awp.ucSettings.resources
