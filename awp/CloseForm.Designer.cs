@@ -37,6 +37,7 @@ namespace awp
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.button1.Location = new System.Drawing.Point(13, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
@@ -48,6 +49,7 @@ namespace awp
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.button2.Location = new System.Drawing.Point(120, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 28);

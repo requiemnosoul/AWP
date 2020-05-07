@@ -56,8 +56,6 @@ namespace awp
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon) (resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // contextMenuStrip1
@@ -65,12 +63,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(103, 28);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -229,7 +227,7 @@ namespace awp
             this.ucAbout1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucAbout1.Location = new System.Drawing.Point(0, 0);
-            this.ucAbout1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucAbout1.Margin = new System.Windows.Forms.Padding(2);
             this.ucAbout1.Name = "ucAbout1";
             this.ucAbout1.Size = new System.Drawing.Size(620, 415);
             this.ucAbout1.TabIndex = 2;
@@ -238,7 +236,7 @@ namespace awp
             // 
             this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucSettings1.Location = new System.Drawing.Point(0, 0);
-            this.ucSettings1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucSettings1.Margin = new System.Windows.Forms.Padding(2);
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(620, 415);
             this.ucSettings1.TabIndex = 1;

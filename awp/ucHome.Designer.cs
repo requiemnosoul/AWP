@@ -35,12 +35,11 @@ namespace awp
             // 
             // ucHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucHome";
-            this.Size = new System.Drawing.Size(620, 415);
+            this.Size = new System.Drawing.Size(827, 511);
             this.ResumeLayout(false);
         }
 
