@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
+using Org.BouncyCastle.Utilities.Encoders;
 
 namespace awp
 {
     public partial class AwpForm : Form
     {
-        private readonly Queue<Button> _currentButton = new Queue<Button>();
+        private readonly Queue<IconButton> _currentButton = new Queue<IconButton>();
         public AwpForm()
         {
             InitializeComponent();
             notifyIcon1.Visible = true;
             panelMenu.Controls.Add(sidePanel);
             sidePanel.BringToFront();
-            //TODO add start uc
+            ucHome1.BringToFront();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -39,24 +42,29 @@ namespace awp
             ShowInTaskbar = true;
         }
 
-        private void AwpForm_MouseDown(object sender, MouseEventArgs e) // Перемещение формы по экрану
+        private void AwpForm_MouseDown(object sender, MouseEventArgs e)
         {
             base.Capture = false;
             var m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
 
-        void ActiveButton(Button b, Panel p, UserControl uc)
+        void ActiveButton(IconButton b, Panel p, UserControl uc)
         {
             uc.BringToFront();
             p.Height = b.Height;
             p.Top = b.Top;
             p.Visible = true;
             b.BackColor = this.BackColor;
+            b.IconColor = Color.FromArgb(10, 234, 246);
             if (_currentButton.Contains(b)==false)
                 _currentButton.Enqueue(b);
             if (_currentButton.Count > 1)
-                _currentButton.Dequeue().BackColor = panelMenu.BackColor;
+            {
+                _currentButton.Peek().BackColor = panelMenu.BackColor;
+                _currentButton.Peek().IconColor = Color.White;
+                _currentButton.Dequeue();
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -66,22 +74,27 @@ namespace awp
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel, ucHome1);
+            ActiveButton(sender as IconButton, sidePanel, ucHome1);
         }
 
         private void dbButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel, ucDB1);
+            ActiveButton(sender as IconButton, sidePanel, ucDB1);
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel, ucSettings1);
+            ActiveButton(sender as IconButton, sidePanel, ucSettings1);
         }
 
         private void aboutButton_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender as Button, sidePanel, ucAbout1);
+            ActiveButton(sender as IconButton, sidePanel, ucAbout1);
+        }
+
+        private void dumpButton_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender as IconButton, sidePanel, ucDump1);
         }
     }
 }

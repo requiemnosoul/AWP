@@ -38,6 +38,8 @@ namespace awp
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.dumpButton = new FontAwesome.Sharp.IconButton();
             this.settingsButton = new FontAwesome.Sharp.IconButton();
             this.aboutButton = new FontAwesome.Sharp.IconButton();
             this.homeButton = new FontAwesome.Sharp.IconButton();
@@ -45,6 +47,7 @@ namespace awp
             this.exitButton = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.ucDump1 = new awp.ucDump();
             this.ucDB1 = new awp.ucDB();
             this.ucAbout1 = new awp.ucAbout();
             this.ucSettings1 = new awp.ucSettings();
@@ -76,6 +79,8 @@ namespace awp
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (23)))), ((int) (((byte) (22)))));
             this.panelMenu.Controls.Add(this.sidePanel);
+            this.panelMenu.Controls.Add(this.iconButton2);
+            this.panelMenu.Controls.Add(this.dumpButton);
             this.panelMenu.Controls.Add(this.settingsButton);
             this.panelMenu.Controls.Add(this.aboutButton);
             this.panelMenu.Controls.Add(this.homeButton);
@@ -93,6 +98,46 @@ namespace awp
             this.sidePanel.Size = new System.Drawing.Size(5, 50);
             this.sidePanel.TabIndex = 6;
             this.sidePanel.Visible = false;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 292);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Rotation = 0D;
+            this.iconButton2.Size = new System.Drawing.Size(180, 50);
+            this.iconButton2.TabIndex = 5;
+            this.iconButton2.Text = "Settings";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // dumpButton
+            // 
+            this.dumpButton.FlatAppearance.BorderSize = 0;
+            this.dumpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dumpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.dumpButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dumpButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.dumpButton.IconColor = System.Drawing.Color.White;
+            this.dumpButton.IconSize = 30;
+            this.dumpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dumpButton.Location = new System.Drawing.Point(0, 236);
+            this.dumpButton.Name = "dumpButton";
+            this.dumpButton.Rotation = 0D;
+            this.dumpButton.Size = new System.Drawing.Size(180, 50);
+            this.dumpButton.TabIndex = 5;
+            this.dumpButton.Text = "Dump";
+            this.dumpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dumpButton.UseVisualStyleBackColor = true;
+            this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
             // settingsButton
             // 
@@ -203,6 +248,7 @@ namespace awp
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.LightGray;
+            this.panelMain.Controls.Add(this.ucDump1);
             this.panelMain.Controls.Add(this.ucDB1);
             this.panelMain.Controls.Add(this.ucAbout1);
             this.panelMain.Controls.Add(this.ucSettings1);
@@ -211,6 +257,15 @@ namespace awp
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(620, 415);
             this.panelMain.TabIndex = 10;
+            // 
+            // ucDump1
+            // 
+            this.ucDump1.BackColor = System.Drawing.Color.White;
+            this.ucDump1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDump1.Location = new System.Drawing.Point(0, 0);
+            this.ucDump1.Name = "ucDump1";
+            this.ucDump1.Size = new System.Drawing.Size(620, 415);
+            this.ucDump1.TabIndex = 4;
             // 
             // ucDB1
             // 
@@ -276,9 +331,11 @@ namespace awp
         private FontAwesome.Sharp.IconButton aboutButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private FontAwesome.Sharp.IconButton dbButton;
+        private FontAwesome.Sharp.IconButton dumpButton;
         private FontAwesome.Sharp.IconButton exitButton;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private FontAwesome.Sharp.IconButton homeButton;
+        private FontAwesome.Sharp.IconButton iconButton2;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelMain;
@@ -287,6 +344,7 @@ namespace awp
         private System.Windows.Forms.Panel sidePanel;
         private awp.ucAbout ucAbout1;
         private awp.ucDB ucDB1;
+        private awp.ucDump ucDump1;
         private awp.ucHome ucHome1;
         private awp.ucSettings ucSettings1;
 

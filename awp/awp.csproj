@@ -141,6 +141,12 @@
     <Compile Include="ucDB.Designer.cs">
       <DependentUpon>ucDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucDump.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDump.Designer.cs">
+      <DependentUpon>ucDump.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucDB.resx">
       <DependentUpon>ucDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDump.resx">
+      <DependentUpon>ucDump.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>

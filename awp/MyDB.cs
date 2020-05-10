@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Diagnostics;
+using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +26,11 @@ namespace awp
                     MessageBox.Show(ex.Message);
                 }
             });
+        }
+        public static void myDump(string path)
+        { 
+            string command = $"/c mysqldump.exe -u {ucDB.login} -h {ucDB.serv} -p{ucDB.pass} {ucDB.db} > {path}";
+            Process.Start("CMD.exe",command);
         }
     }
 }

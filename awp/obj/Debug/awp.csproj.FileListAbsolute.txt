@@ -80,3 +80,4 @@ S:\osu\awp\awp\obj\Debug\awp.ucAbout.resources
 S:\osu\awp\awp\obj\Debug\awp.ucDB.resources
 S:\osu\awp\awp\obj\Debug\awp.ucHome.resources
 S:\osu\awp\awp\obj\Debug\awp.ucSettings.resources
+X:\awp\awp\obj\Debug\awp.ucDump.resources
