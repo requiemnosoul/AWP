@@ -260,7 +260,7 @@ namespace awp
             // 
             // ucDump1
             // 
-            this.ucDump1.BackColor = System.Drawing.Color.White;
+            this.ucDump1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
             this.ucDump1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDump1.Location = new System.Drawing.Point(0, 0);
             this.ucDump1.Name = "ucDump1";

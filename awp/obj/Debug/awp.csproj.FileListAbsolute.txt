@@ -81,3 +81,5 @@ S:\osu\awp\awp\obj\Debug\awp.ucDB.resources
 S:\osu\awp\awp\obj\Debug\awp.ucHome.resources
 S:\osu\awp\awp\obj\Debug\awp.ucSettings.resources
 X:\awp\awp\obj\Debug\awp.ucDump.resources
+X:\awp\awp\bin\Debug\System.Data.SqlClient.dll
+X:\awp\awp\bin\Debug\System.Data.SqlClient.xml

@@ -11,6 +11,7 @@ namespace awp
             InitializeComponent();
         }
 
+        private string serv, login, pass, db;
         private void dumpButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -18,8 +19,7 @@ namespace awp
             sfd.FileName = "dump_" + DateTime.Now.ToShortDateString().Replace(".", "_");
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                MyDB.myDump(sfd.FileName);
-                
+                MySQL.myDump(serv, login, pass, db, sfd.FileName);
             }
         }
     }

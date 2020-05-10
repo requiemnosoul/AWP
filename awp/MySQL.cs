@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public class MyDB
+    public class MySQL
     {
         public static MySqlConnection conn;
 
         public static void Connection(string serv, string login, string pass, string db)
         {
-            string myConnectionString = "server=" + serv + ";uid=" + login + ";pwd=" + pass + ";database=" + db;
+            string myConnectionString = $"server={serv};uid={login};pwd={pass};database={db}";
             conn = new MySqlConnection(myConnectionString);
             Task.Run(() =>
             {
@@ -27,9 +27,9 @@ namespace awp
                 }
             });
         }
-        public static void myDump(string path)
+        public static void myDump(string serv, string login, string pass, string db, string path)
         { 
-            string command = $"/c mysqldump.exe -u {ucDB.login} -h {ucDB.serv} -p{ucDB.pass} {ucDB.db} > {path}";
+            string command = $"/c mysqldump.exe -u {login} -h {serv} -p{pass} {db} > {path}";
             Process.Start("CMD.exe",command);
         }
     }
