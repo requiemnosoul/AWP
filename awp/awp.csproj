@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -146,6 +147,12 @@
     <Compile Include="ucDB.Designer.cs">
       <DependentUpon>ucDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucDbTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDbTab.Designer.cs">
+      <DependentUpon>ucDbTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDump.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucDB.resx">
       <DependentUpon>ucDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDbTab.resx">
+      <DependentUpon>ucDbTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucDump.resx">
       <DependentUpon>ucDump.cs</DependentUpon>
