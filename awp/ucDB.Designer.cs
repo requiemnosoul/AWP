@@ -56,9 +56,9 @@ namespace awp
             // 
             this.checkPort.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.checkPort.ForeColor = System.Drawing.Color.Black;
-            this.checkPort.Location = new System.Drawing.Point(398, 111);
+            this.checkPort.Location = new System.Drawing.Point(398, 108);
             this.checkPort.Name = "checkPort";
-            this.checkPort.Size = new System.Drawing.Size(80, 30);
+            this.checkPort.Size = new System.Drawing.Size(108, 38);
             this.checkPort.TabIndex = 7;
             this.checkPort.Text = "use port \r\nnon-standart\r\n";
             this.checkPort.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@ namespace awp
             this.comboDBMS.Items.AddRange(new object[] {"MySQL", "MS SQL Server"});
             this.comboDBMS.Location = new System.Drawing.Point(256, 86);
             this.comboDBMS.Name = "comboDBMS";
-            this.comboDBMS.Size = new System.Drawing.Size(136, 21);
+            this.comboDBMS.Size = new System.Drawing.Size(136, 24);
             this.comboDBMS.TabIndex = 5;
             this.comboDBMS.SelectionChangeCommitted += new System.EventHandler(this.comboDBMS_SelectionChangeCommitted);
             // 
@@ -150,7 +150,7 @@ namespace awp
             this.textBox5.Location = new System.Drawing.Point(256, 200);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 20);
+            this.textBox5.Size = new System.Drawing.Size(136, 22);
             this.textBox5.TabIndex = 3;
             // 
             // textBox4
@@ -159,7 +159,7 @@ namespace awp
             this.textBox4.Location = new System.Drawing.Point(256, 172);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 20);
+            this.textBox4.Size = new System.Drawing.Size(136, 22);
             this.textBox4.TabIndex = 2;
             this.textBox4.Text = "root";
             this.textBox4.UseSystemPasswordChar = true;
@@ -170,7 +170,7 @@ namespace awp
             this.textBox3.Location = new System.Drawing.Point(256, 143);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
+            this.textBox3.Size = new System.Drawing.Size(136, 22);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "root";
             // 
@@ -180,7 +180,7 @@ namespace awp
             this.textBox2.Location = new System.Drawing.Point(354, 115);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 20);
+            this.textBox2.Size = new System.Drawing.Size(38, 22);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "3306";
             // 
@@ -190,7 +190,7 @@ namespace awp
             this.textBox1.Location = new System.Drawing.Point(256, 115);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 20);
+            this.textBox1.Size = new System.Drawing.Size(92, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "localhost";
             // 
@@ -234,7 +234,6 @@ namespace awp
             // panelAddConnection
             // 
             this.panelAddConnection.BackColor = System.Drawing.Color.White;
-            this.panelAddConnection.Controls.Add(this.ucDbTab1);
             this.panelAddConnection.Controls.Add(this.textBox1);
             this.panelAddConnection.Controls.Add(this.textBox2);
             this.panelAddConnection.Controls.Add(this.textBox3);
@@ -257,10 +256,12 @@ namespace awp
             // ucDbTab1
             // 
             this.ucDbTab1.BackColor = System.Drawing.Color.White;
-            this.ucDbTab1.Location = new System.Drawing.Point(0, 0);
+            this.ucDbTab1.Location = new System.Drawing.Point(7, 43);
+            this.ucDbTab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ucDbTab1.Name = "ucDbTab1";
             this.ucDbTab1.Size = new System.Drawing.Size(606, 365);
             this.ucDbTab1.TabIndex = 8;
+            this.ucDbTab1.Visible = false;
             // 
             // ucDB
             // 
@@ -269,6 +270,7 @@ namespace awp
             this.Controls.Add(this.panelAddConnection);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.buttonAddConnection);
+            this.Controls.Add(this.ucDbTab1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucDB";
             this.Size = new System.Drawing.Size(620, 415);

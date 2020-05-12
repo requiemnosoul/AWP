@@ -39,7 +39,8 @@ namespace awp
 
         public void successfulConnection(string db)
         {
-            panelAddConnection.Visible = false;
+            MessageBox.Show("Nice");
+            //panelAddConnection.Visible = false;
             ucDbTab ucDbTab1 = new ucDbTab();
             ucDbTab1.Location = new Point(7,43);
             ucDbTab1.Size = new Size(606,365);
