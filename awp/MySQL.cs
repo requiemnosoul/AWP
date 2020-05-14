@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Data;
+using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -7,24 +8,23 @@ namespace awp
 {
     public class MySQL
     {
-        public static MySqlConnection conn;
-
         public static void Connection(string serv, string login, string pass, string db, string port)
         {
             ucDB ucDB1 = new ucDB();
-
+        
             string myConnectionString = $"Server={serv}; Port={port}; Uid={login}; Pwd={pass}; Database={db}";
-            conn = new MySqlConnection(myConnectionString);
+            MySqlConnection conn = new MySqlConnection(myConnectionString);
             Task.Run(() =>
             {
                 try
                 {
                     conn.Open();
-                    ucDB1.successfulConnection(db);
+                    ucDB1.newConnTab(db);
                 }
                 catch (MySqlException ex)
                 {
                     MessageBox.Show(ex.Message);
+                    ucDB1.newConnTab(db);
                 }
             });
         }

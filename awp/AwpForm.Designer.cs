@@ -80,7 +80,7 @@ namespace awp
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (23)))), ((int) (((byte) (22)))));
+            this.panelMenu.BackColor = System.Drawing.Color.Black;
             this.panelMenu.Controls.Add(this.sidePanel);
             this.panelMenu.Controls.Add(this.iconButton2);
             this.panelMenu.Controls.Add(this.dumpButton);
@@ -107,12 +107,12 @@ namespace awp
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 292);
+            this.iconButton2.Location = new System.Drawing.Point(0, 270);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(180, 50);
@@ -127,12 +127,12 @@ namespace awp
             this.dumpButton.FlatAppearance.BorderSize = 0;
             this.dumpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dumpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.dumpButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.dumpButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.dumpButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dumpButton.IconChar = FontAwesome.Sharp.IconChar.Copy;
             this.dumpButton.IconColor = System.Drawing.Color.White;
             this.dumpButton.IconSize = 30;
             this.dumpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dumpButton.Location = new System.Drawing.Point(0, 236);
+            this.dumpButton.Location = new System.Drawing.Point(0, 220);
             this.dumpButton.Name = "dumpButton";
             this.dumpButton.Rotation = 0D;
             this.dumpButton.Size = new System.Drawing.Size(180, 50);
@@ -147,12 +147,12 @@ namespace awp
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.settingsButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.settingsButton.IconColor = System.Drawing.Color.White;
             this.settingsButton.IconSize = 30;
             this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(0, 180);
+            this.settingsButton.Location = new System.Drawing.Point(0, 170);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Rotation = 0D;
             this.settingsButton.Size = new System.Drawing.Size(180, 50);
@@ -167,7 +167,7 @@ namespace awp
             this.aboutButton.FlatAppearance.BorderSize = 0;
             this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aboutButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.aboutButton.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.aboutButton.IconColor = System.Drawing.Color.White;
             this.aboutButton.IconSize = 30;
@@ -187,7 +187,7 @@ namespace awp
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.homeButton.IconColor = System.Drawing.Color.White;
             this.homeButton.IconSize = 30;
@@ -207,7 +207,7 @@ namespace awp
             this.dbButton.FlatAppearance.BorderSize = 0;
             this.dbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dbButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.dbButton.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.dbButton.IconColor = System.Drawing.Color.White;
             this.dbButton.IconSize = 30;
@@ -217,7 +217,7 @@ namespace awp
             this.dbButton.Rotation = 0D;
             this.dbButton.Size = new System.Drawing.Size(180, 50);
             this.dbButton.TabIndex = 5;
-            this.dbButton.Text = "Database";
+            this.dbButton.Text = "Databases";
             this.dbButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dbButton.UseVisualStyleBackColor = true;
             this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
@@ -312,7 +312,7 @@ namespace awp
             // AwpForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);

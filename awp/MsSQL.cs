@@ -11,6 +11,8 @@ namespace awp
 
         public static void Connection(string serv, string login, string pass, string db, string port)
         {
+            ucDB ucDB1 = new ucDB();
+            
             string ConnectionString = $"Data Source={serv},{port};Initial Catalog={db};User id={login};Password={pass};";
             conn = new SqlConnection(ConnectionString);
             Task.Run(() =>
@@ -18,8 +20,7 @@ namespace awp
                 try
                 {
                     conn.Open();
-                    MessageBox.Show("Nice");
-                    //conn.Close();
+                    ucDB1.successfulConnection(db);
                 }
                 catch (SqlException ex)
                 {

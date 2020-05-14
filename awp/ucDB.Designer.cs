@@ -46,7 +46,7 @@ namespace awp
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonAddConnection = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnTabDb = new FontAwesome.Sharp.IconButton();
             this.panelAddConnection = new System.Windows.Forms.Panel();
             this.ucDbTab1 = new awp.ucDbTab();
             this.panelAddConnection.SuspendLayout();
@@ -133,6 +133,7 @@ namespace awp
             // buttonConnect
             // 
             this.buttonConnect.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonConnect.Enabled = false;
             this.buttonConnect.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.buttonConnect.ForeColor = System.Drawing.Color.Black;
             this.buttonConnect.Location = new System.Drawing.Point(256, 227);
@@ -202,7 +203,7 @@ namespace awp
             this.buttonAddConnection.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.buttonAddConnection.IconColor = System.Drawing.Color.Pink;
             this.buttonAddConnection.IconSize = 27;
-            this.buttonAddConnection.Location = new System.Drawing.Point(133, 6);
+            this.buttonAddConnection.Location = new System.Drawing.Point(10, 6);
             this.buttonAddConnection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddConnection.Name = "buttonAddConnection";
             this.buttonAddConnection.Rotation = 0D;
@@ -211,25 +212,26 @@ namespace awp
             this.buttonAddConnection.UseVisualStyleBackColor = true;
             this.buttonAddConnection.Click += new System.EventHandler(this.buttonAddConnection_Click);
             // 
-            // iconButton2
+            // btnTabDb
             // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Database;
-            this.iconButton2.IconColor = System.Drawing.Color.Yellow;
-            this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(13, 6);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(120, 37);
-            this.iconButton2.TabIndex = 0;
-            this.iconButton2.Text = "Connect";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnTabDb.FlatAppearance.BorderSize = 0;
+            this.btnTabDb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnTabDb.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.btnTabDb.ForeColor = System.Drawing.Color.White;
+            this.btnTabDb.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.btnTabDb.IconColor = System.Drawing.Color.Yellow;
+            this.btnTabDb.IconSize = 20;
+            this.btnTabDb.Location = new System.Drawing.Point(10, 6);
+            this.btnTabDb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTabDb.Name = "btnTabDb";
+            this.btnTabDb.Rotation = 0D;
+            this.btnTabDb.Size = new System.Drawing.Size(120, 37);
+            this.btnTabDb.TabIndex = 0;
+            this.btnTabDb.Text = "Connect";
+            this.btnTabDb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTabDb.UseVisualStyleBackColor = true;
+            this.btnTabDb.Visible = false;
             // 
             // panelAddConnection
             // 
@@ -251,26 +253,24 @@ namespace awp
             this.panelAddConnection.Name = "panelAddConnection";
             this.panelAddConnection.Size = new System.Drawing.Size(606, 365);
             this.panelAddConnection.TabIndex = 2;
-            this.panelAddConnection.Visible = false;
             // 
             // ucDbTab1
             // 
             this.ucDbTab1.BackColor = System.Drawing.Color.White;
             this.ucDbTab1.Location = new System.Drawing.Point(7, 43);
-            this.ucDbTab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ucDbTab1.Margin = new System.Windows.Forms.Padding(4);
             this.ucDbTab1.Name = "ucDbTab1";
             this.ucDbTab1.Size = new System.Drawing.Size(606, 365);
             this.ucDbTab1.TabIndex = 8;
-            this.ucDbTab1.Visible = false;
             // 
             // ucDB
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
             this.Controls.Add(this.panelAddConnection);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.buttonAddConnection);
             this.Controls.Add(this.ucDbTab1);
+            this.Controls.Add(this.buttonAddConnection);
+            this.Controls.Add(this.btnTabDb);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucDB";
             this.Size = new System.Drawing.Size(620, 415);
@@ -279,11 +279,11 @@ namespace awp
             this.ResumeLayout(false);
         }
 
+        private FontAwesome.Sharp.IconButton btnTabDb;
         private FontAwesome.Sharp.IconButton buttonAddConnection;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.CheckBox checkPort;
         private System.Windows.Forms.ComboBox comboDBMS;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
