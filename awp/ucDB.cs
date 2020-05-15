@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using MySql.Data.MySqlClient;
 
 namespace awp
 {
-    public partial class ucDB : UserControl
+    internal partial class ucDB : UserControl
     {
-        Dictionary<IconButton,UserControl> tabs = new Dictionary<IconButton, UserControl>();
-
-        public static string serv = "192.168.31.171", login = "root", pass = "Nanaka810", db = "mysql", port = "3306";
+        private Dictionary<IconButton, UserControl> tabs = new Dictionary<IconButton, UserControl>();
+        private  Stack<Panel> pnlDivide = new Stack<Panel>();
+        
+        public static string serv = "localhost", login = "root", pass = "Nanaka810", db = "mysql", port = "3306";
 
         public ucDB()
         {
@@ -24,6 +23,14 @@ namespace awp
             textBox3.Text = login;
             textBox4.Text = pass;
             textBox5.Text = db;
+            buttonAddConnection.MouseEnter += (s, e) => {
+                buttonAddConnection.IconChar = IconChar.PlusCircle;
+                buttonAddConnection.IconSize = 40;
+            };
+            buttonAddConnection.MouseLeave += (s, e) => {
+                buttonAddConnection.IconChar = IconChar.Plus;
+                buttonAddConnection.IconSize = 30;
+            };
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -40,11 +47,6 @@ namespace awp
         {
             MessageBox.Show("Nice");
             newConnTab(db);
-        }
-
-        public void errorConnection(string db)
-        {
-            
         }
         
         void ConnectionDB()
@@ -107,7 +109,8 @@ namespace awp
             IconButton B = Clone(btnTabDb);
             B.Name = "btn_" + _db;
             B.Text = _db;
-            B.Location = new Point(10+(tabs.Count * 120),6);
+            B.Top = panelAddConnection.Top - B.Height;
+            B.Left = tabs.Count * B.Width;
             B.Visible = true;
             B.FlatAppearance.BorderSize = 0;
             B.Click += btnTabDb_Click;
@@ -116,12 +119,23 @@ namespace awp
             UserControl ucTab = new ucDbTab();
             ucTab.Name = "tab_" + _db;
             ucTab.Controls[0].Text += _db;
-            ucTab.Location = new Point(7,43);
+            ucTab.Location = panelAddConnection.Location;
+            ucTab.Bounds = new Rectangle(panelAddConnection.Location, panelAddConnection.Size);
+            ucTab.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             Controls.Add(ucTab);
             
-            buttonAddConnection.Location = new Point(130 + (tabs.Count * 120),6);
-
             tabs[B] = ucTab;
+            
+            Panel P = new Panel();
+            P.Size = new Size(2,40);
+            P.BackColor = Color.FromArgb(33, 55, 80);
+            P.Location = new Point((tabs.Count * B.Width) - 1,5);
+            Controls.Add(P);
+            P.BringToFront();
+            pnlDivide.Push(P);
+            
+            buttonAddConnection.Left = tabs.Count * B.Width;
+
             btnTabDb_Click(B,EventArgs.Empty);
         }
         
@@ -151,17 +165,23 @@ namespace awp
         void activeTab(IconButton b)
         {
             if(b.Name != "buttonAddConnection")
+            {
                 b.BackColor = Color.White;
-            b.IconColor = Color.Red;
-            b.ForeColor = Color.Black;
+                b.IconColor = Color.Red;
+                b.ForeColor = Color.Black;
+            }
+            else if (tabs.Count != 0)
+            {
+                b.IconColor = Color.Pink;
+            }
             if (_currentTab.Contains(b)==false)
                 _currentTab.Enqueue(b);
             if (_currentTab.Count > 1)
             {
                 if (_currentTab.Peek().Name == "buttonAddConnection")
-                    _currentTab.Peek().IconColor = Color.Pink;
+                    _currentTab.Peek().IconColor = Color.White;
                 else
-                    _currentTab.Peek().IconColor = Color.Yellow;
+                    _currentTab.Peek().IconColor = Color.Aqua;
                 _currentTab.Peek().BackColor = BackColor;
                 _currentTab.Peek().ForeColor = Color.White;
                 _currentTab.Dequeue();

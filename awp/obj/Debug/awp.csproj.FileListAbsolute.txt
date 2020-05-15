@@ -165,7 +165,6 @@ X:\Automated WorkPlace\awp\obj\Debug\awp.ucDB.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.ucDbTab.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.ucDump.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.ucHome.resources
-X:\Automated WorkPlace\awp\obj\Debug\awp.LoginForm.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.Properties.Resources.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.ucSettings.resources
 X:\Automated WorkPlace\awp\obj\Debug\awp.csproj.GenerateResource.cache
@@ -173,3 +172,4 @@ X:\Automated WorkPlace\awp\obj\Debug\awp.csproj.CoreCompileInputs.cache
 X:\Automated WorkPlace\awp\obj\Debug\awp.csproj.CopyComplete
 X:\Automated WorkPlace\awp\obj\Debug\awp.exe
 X:\Automated WorkPlace\awp\obj\Debug\awp.pdb
+X:\Automated WorkPlace\awp\obj\Debug\awp.ucReports.resources

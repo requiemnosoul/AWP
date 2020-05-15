@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public partial class CloseForm : Form
+    internal partial class CloseForm : Form
     {
         private readonly Form main;
         public CloseForm(Form f)

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public partial class ucDump : UserControl
+    internal partial class ucDump : UserControl
     {
         public ucDump()
         {

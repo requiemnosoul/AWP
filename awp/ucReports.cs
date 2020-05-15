@@ -1,11 +1,10 @@
-﻿using System;
 using System.Windows.Forms;
 
 namespace awp
 {
-    internal partial class ucDbTab : UserControl
+    public partial class ucReports : UserControl
     {
-        public ucDbTab()
+        public ucReports()
         {
             InitializeComponent();
         }

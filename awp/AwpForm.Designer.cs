@@ -36,31 +36,28 @@ namespace awp
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelMenu = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.dbButton = new FontAwesome.Sharp.IconButton();
+            this.homeButton = new FontAwesome.Sharp.IconButton();
+            this.aboutButton = new FontAwesome.Sharp.IconButton();
+            this.reportsButton = new FontAwesome.Sharp.IconButton();
             this.dumpButton = new FontAwesome.Sharp.IconButton();
             this.settingsButton = new FontAwesome.Sharp.IconButton();
-            this.aboutButton = new FontAwesome.Sharp.IconButton();
-            this.homeButton = new FontAwesome.Sharp.IconButton();
-            this.dbButton = new FontAwesome.Sharp.IconButton();
-            this.exitButton = new FontAwesome.Sharp.IconButton();
+            this.awpButton = new FontAwesome.Sharp.IconButton();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.ucDump1 = new awp.ucDump();
-            this.ucDB1 = new awp.ucDB();
             this.ucAbout1 = new awp.ucAbout();
             this.ucSettings1 = new awp.ucSettings();
+            this.ucDump1 = new awp.ucDump();
+            this.ucDB1 = new awp.ucDB();
+            this.ucReports1 = new awp.ucReports();
             this.ucHome1 = new awp.ucHome();
             this.contextMenuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon) (resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
@@ -78,49 +75,95 @@ namespace awp
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.sidePanel);
-            this.panelMenu.Controls.Add(this.iconButton2);
-            this.panelMenu.Controls.Add(this.dumpButton);
-            this.panelMenu.Controls.Add(this.settingsButton);
-            this.panelMenu.Controls.Add(this.aboutButton);
-            this.panelMenu.Controls.Add(this.homeButton);
-            this.panelMenu.Controls.Add(this.dbButton);
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(180, 450);
-            this.panelMenu.TabIndex = 3;
-            // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Red;
-            this.sidePanel.Location = new System.Drawing.Point(0, 70);
+            this.sidePanel.Location = new System.Drawing.Point(0, 50);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(5, 50);
             this.sidePanel.TabIndex = 6;
             this.sidePanel.Visible = false;
             // 
-            // iconButton2
+            // dbButton
             // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 270);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(180, 50);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Settings";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.settingsButton_Click);
+            this.dbButton.FlatAppearance.BorderSize = 0;
+            this.dbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dbButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dbButton.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.dbButton.IconColor = System.Drawing.Color.White;
+            this.dbButton.IconSize = 30;
+            this.dbButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dbButton.Location = new System.Drawing.Point(0, 100);
+            this.dbButton.Name = "dbButton";
+            this.dbButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.dbButton.Rotation = 0D;
+            this.dbButton.Size = new System.Drawing.Size(200, 50);
+            this.dbButton.TabIndex = 5;
+            this.dbButton.Text = "  Databases";
+            this.dbButton.UseVisualStyleBackColor = true;
+            this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
+            // 
+            // homeButton
+            // 
+            this.homeButton.FlatAppearance.BorderSize = 0;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.homeButton.IconColor = System.Drawing.Color.White;
+            this.homeButton.IconSize = 30;
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.Location = new System.Drawing.Point(0, 50);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.homeButton.Rotation = 0D;
+            this.homeButton.Size = new System.Drawing.Size(200, 50);
+            this.homeButton.TabIndex = 5;
+            this.homeButton.Text = "Home     ";
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
+            // aboutButton
+            // 
+            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aboutButton.FlatAppearance.BorderSize = 0;
+            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.aboutButton.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
+            this.aboutButton.IconColor = System.Drawing.Color.White;
+            this.aboutButton.IconSize = 30;
+            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutButton.Location = new System.Drawing.Point(0, 432);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.aboutButton.Rotation = 0D;
+            this.aboutButton.Size = new System.Drawing.Size(200, 50);
+            this.aboutButton.TabIndex = 5;
+            this.aboutButton.Text = "About    ";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+            // 
+            // reportsButton
+            // 
+            this.reportsButton.FlatAppearance.BorderSize = 0;
+            this.reportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportsButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.reportsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.reportsButton.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.reportsButton.IconColor = System.Drawing.Color.White;
+            this.reportsButton.IconSize = 30;
+            this.reportsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportsButton.Location = new System.Drawing.Point(0, 150);
+            this.reportsButton.Name = "reportsButton";
+            this.reportsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.reportsButton.Rotation = 0D;
+            this.reportsButton.Size = new System.Drawing.Size(200, 50);
+            this.reportsButton.TabIndex = 5;
+            this.reportsButton.Text = "Reports  ";
+            this.reportsButton.UseVisualStyleBackColor = true;
+            this.reportsButton.Click += new System.EventHandler(this.reportsButton_Click);
             // 
             // dumpButton
             // 
@@ -132,13 +175,13 @@ namespace awp
             this.dumpButton.IconColor = System.Drawing.Color.White;
             this.dumpButton.IconSize = 30;
             this.dumpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dumpButton.Location = new System.Drawing.Point(0, 220);
+            this.dumpButton.Location = new System.Drawing.Point(0, 200);
             this.dumpButton.Name = "dumpButton";
+            this.dumpButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.dumpButton.Rotation = 0D;
-            this.dumpButton.Size = new System.Drawing.Size(180, 50);
+            this.dumpButton.Size = new System.Drawing.Size(200, 50);
             this.dumpButton.TabIndex = 5;
-            this.dumpButton.Text = "Dump";
-            this.dumpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dumpButton.Text = "Dump     ";
             this.dumpButton.UseVisualStyleBackColor = true;
             this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
@@ -152,203 +195,165 @@ namespace awp
             this.settingsButton.IconColor = System.Drawing.Color.White;
             this.settingsButton.IconSize = 30;
             this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsButton.Location = new System.Drawing.Point(0, 170);
+            this.settingsButton.Location = new System.Drawing.Point(0, 250);
             this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.settingsButton.Rotation = 0D;
-            this.settingsButton.Size = new System.Drawing.Size(180, 50);
+            this.settingsButton.Size = new System.Drawing.Size(200, 50);
             this.settingsButton.TabIndex = 5;
-            this.settingsButton.Text = "Settings";
-            this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.settingsButton.Text = "Settings ";
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
-            // aboutButton
+            // awpButton
             // 
-            this.aboutButton.FlatAppearance.BorderSize = 0;
-            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.aboutButton.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
-            this.aboutButton.IconColor = System.Drawing.Color.White;
-            this.aboutButton.IconSize = 30;
-            this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutButton.Location = new System.Drawing.Point(0, 400);
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Rotation = 0D;
-            this.aboutButton.Size = new System.Drawing.Size(180, 50);
-            this.aboutButton.TabIndex = 5;
-            this.aboutButton.Text = "About";
-            this.aboutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.aboutButton.UseVisualStyleBackColor = true;
-            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+            this.awpButton.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.awpButton.FlatAppearance.BorderSize = 0;
+            this.awpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.awpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.awpButton.Font = new System.Drawing.Font("Chiller", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.awpButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
+            this.awpButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.awpButton.IconColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
+            this.awpButton.IconSize = 30;
+            this.awpButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.awpButton.Location = new System.Drawing.Point(0, 0);
+            this.awpButton.Name = "awpButton";
+            this.awpButton.Rotation = 0D;
+            this.awpButton.Size = new System.Drawing.Size(200, 50);
+            this.awpButton.TabIndex = 7;
+            this.awpButton.Text = "Automated WorkPlace";
+            this.awpButton.UseVisualStyleBackColor = false;
+            this.awpButton.Click += new System.EventHandler(this.awpButton_Click);
             // 
-            // homeButton
+            // panelMenu
             // 
-            this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.homeButton.IconColor = System.Drawing.Color.White;
-            this.homeButton.IconSize = 30;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 70);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Rotation = 0D;
-            this.homeButton.Size = new System.Drawing.Size(180, 50);
-            this.homeButton.TabIndex = 5;
-            this.homeButton.Text = "Home";
-            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
-            // dbButton
-            // 
-            this.dbButton.FlatAppearance.BorderSize = 0;
-            this.dbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dbButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.dbButton.IconChar = FontAwesome.Sharp.IconChar.Database;
-            this.dbButton.IconColor = System.Drawing.Color.White;
-            this.dbButton.IconSize = 30;
-            this.dbButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dbButton.Location = new System.Drawing.Point(0, 120);
-            this.dbButton.Name = "dbButton";
-            this.dbButton.Rotation = 0D;
-            this.dbButton.Size = new System.Drawing.Size(180, 50);
-            this.dbButton.TabIndex = 5;
-            this.dbButton.Text = "Databases";
-            this.dbButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.dbButton.UseVisualStyleBackColor = true;
-            this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.exitButton.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.exitButton.IconColor = System.Drawing.Color.White;
-            this.exitButton.IconSize = 28;
-            this.exitButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.exitButton.Location = new System.Drawing.Point(767, 0);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Rotation = 0D;
-            this.exitButton.Size = new System.Drawing.Size(33, 33);
-            this.exitButton.TabIndex = 8;
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (31)))), ((int) (((byte) (37)))), ((int) (((byte) (47)))));
+            this.panelMenu.Controls.Add(this.panel1);
+            this.panelMenu.Controls.Add(this.awpButton);
+            this.panelMenu.Controls.Add(this.settingsButton);
+            this.panelMenu.Controls.Add(this.dumpButton);
+            this.panelMenu.Controls.Add(this.reportsButton);
+            this.panelMenu.Controls.Add(this.aboutButton);
+            this.panelMenu.Controls.Add(this.homeButton);
+            this.panelMenu.Controls.Add(this.dbButton);
+            this.panelMenu.Controls.Add(this.sidePanel);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(200, 482);
+            this.panelMenu.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(180, 33);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (55)))), ((int) (((byte) (80)))));
+            this.panel1.Location = new System.Drawing.Point(198, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(620, 2);
-            this.panel1.TabIndex = 9;
-            // 
-            // panelMain
-            // 
-            this.panelMain.BackColor = System.Drawing.Color.LightGray;
-            this.panelMain.Controls.Add(this.ucDump1);
-            this.panelMain.Controls.Add(this.ucDB1);
-            this.panelMain.Controls.Add(this.ucAbout1);
-            this.panelMain.Controls.Add(this.ucSettings1);
-            this.panelMain.Controls.Add(this.ucHome1);
-            this.panelMain.Location = new System.Drawing.Point(180, 35);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(620, 415);
-            this.panelMain.TabIndex = 10;
-            // 
-            // ucDump1
-            // 
-            this.ucDump1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
-            this.ucDump1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucDump1.Location = new System.Drawing.Point(0, 0);
-            this.ucDump1.Name = "ucDump1";
-            this.ucDump1.Size = new System.Drawing.Size(620, 415);
-            this.ucDump1.TabIndex = 4;
-            // 
-            // ucDB1
-            // 
-            this.ucDB1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
-            this.ucDB1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucDB1.Location = new System.Drawing.Point(0, 0);
-            this.ucDB1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucDB1.Name = "ucDB1";
-            this.ucDB1.Size = new System.Drawing.Size(620, 415);
-            this.ucDB1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(2, 40);
+            this.panel1.TabIndex = 8;
             // 
             // ucAbout1
             // 
             this.ucAbout1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucAbout1.Location = new System.Drawing.Point(0, 0);
-            this.ucAbout1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucAbout1.Location = new System.Drawing.Point(200, 0);
             this.ucAbout1.Name = "ucAbout1";
-            this.ucAbout1.Size = new System.Drawing.Size(620, 415);
-            this.ucAbout1.TabIndex = 2;
+            this.ucAbout1.Size = new System.Drawing.Size(657, 482);
+            this.ucAbout1.TabIndex = 1;
             // 
             // ucSettings1
             // 
+            this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucSettings1.Location = new System.Drawing.Point(0, 0);
-            this.ucSettings1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucSettings1.Location = new System.Drawing.Point(200, 0);
             this.ucSettings1.Name = "ucSettings1";
-            this.ucSettings1.Size = new System.Drawing.Size(620, 415);
-            this.ucSettings1.TabIndex = 1;
+            this.ucSettings1.Size = new System.Drawing.Size(657, 482);
+            this.ucSettings1.TabIndex = 3;
+            // 
+            // ucDump1
+            // 
+            this.ucDump1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.ucDump1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDump1.Location = new System.Drawing.Point(200, 0);
+            this.ucDump1.Name = "ucDump1";
+            this.ucDump1.Size = new System.Drawing.Size(657, 482);
+            this.ucDump1.TabIndex = 4;
+            // 
+            // ucDB1
+            // 
+            this.ucDB1.AutoScroll = true;
+            this.ucDB1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.ucDB1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucDB1.Location = new System.Drawing.Point(200, 0);
+            this.ucDB1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucDB1.Name = "ucDB1";
+            this.ucDB1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ucDB1.Size = new System.Drawing.Size(657, 482);
+            this.ucDB1.TabIndex = 5;
+            // 
+            // ucReports1
+            // 
+            this.ucReports1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucReports1.Location = new System.Drawing.Point(200, 0);
+            this.ucReports1.Name = "ucReports1";
+            this.ucReports1.Size = new System.Drawing.Size(657, 482);
+            this.ucReports1.TabIndex = 6;
             // 
             // ucHome1
             // 
-            this.ucHome1.BackColor = System.Drawing.Color.White;
+            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucHome1.Location = new System.Drawing.Point(0, 0);
-            this.ucHome1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucHome1.Location = new System.Drawing.Point(200, 0);
+            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(620, 415);
-            this.ucHome1.TabIndex = 0;
+            this.ucHome1.Size = new System.Drawing.Size(657, 482);
+            this.ucHome1.TabIndex = 7;
             // 
             // AwpForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.exitButton);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(857, 482);
+            this.Controls.Add(this.ucHome1);
+            this.Controls.Add(this.ucReports1);
+            this.Controls.Add(this.ucDB1);
+            this.Controls.Add(this.ucDump1);
+            this.Controls.Add(this.ucSettings1);
+            this.Controls.Add(this.ucAbout1);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(15, 15);
+            this.Location = new System.Drawing.Point(19, 19);
+            this.MinimumSize = new System.Drawing.Size(218, 397);
             this.Name = "AwpForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AWP";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AwpForm_MouseDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         private FontAwesome.Sharp.IconButton aboutButton;
+        private FontAwesome.Sharp.IconButton awpButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private FontAwesome.Sharp.IconButton dbButton;
         private FontAwesome.Sharp.IconButton dumpButton;
-        private FontAwesome.Sharp.IconButton exitButton;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private FontAwesome.Sharp.IconButton homeButton;
-        private FontAwesome.Sharp.IconButton iconButton2;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelMenu;
+        private FontAwesome.Sharp.IconButton reportsButton;
         private FontAwesome.Sharp.IconButton settingsButton;
         private System.Windows.Forms.Panel sidePanel;
         private awp.ucAbout ucAbout1;
         private awp.ucDB ucDB1;
         private awp.ucDump ucDump1;
         private awp.ucHome ucHome1;
+        private awp.ucReports ucReports1;
         private awp.ucSettings ucSettings1;
 
         #endregion

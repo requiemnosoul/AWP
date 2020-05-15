@@ -2,7 +2,7 @@
 
 namespace awp
 {
-    public partial class ucSettings : UserControl
+    internal partial class ucSettings : UserControl
     {
         public ucSettings()
         {

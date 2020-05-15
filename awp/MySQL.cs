@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public class MySQL
+    internal class MySQL
     {
         public static void Connection(string serv, string login, string pass, string db, string port)
         {

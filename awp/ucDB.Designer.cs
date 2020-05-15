@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace awp
 {
-    partial class ucDB
+    internal partial class ucDB
     {
         /// <summary> 
         /// Required designer variable.
@@ -54,9 +55,10 @@ namespace awp
             // 
             // checkPort
             // 
+            this.checkPort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkPort.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.checkPort.ForeColor = System.Drawing.Color.Black;
-            this.checkPort.Location = new System.Drawing.Point(398, 108);
+            this.checkPort.Location = new System.Drawing.Point(379, 122);
             this.checkPort.Name = "checkPort";
             this.checkPort.Size = new System.Drawing.Size(108, 38);
             this.checkPort.TabIndex = 7;
@@ -66,10 +68,11 @@ namespace awp
             // 
             // comboDBMS
             // 
+            this.comboDBMS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboDBMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDBMS.FormattingEnabled = true;
             this.comboDBMS.Items.AddRange(new object[] {"MySQL", "MS SQL Server"});
-            this.comboDBMS.Location = new System.Drawing.Point(256, 86);
+            this.comboDBMS.Location = new System.Drawing.Point(237, 100);
             this.comboDBMS.Name = "comboDBMS";
             this.comboDBMS.Size = new System.Drawing.Size(136, 24);
             this.comboDBMS.TabIndex = 5;
@@ -77,66 +80,72 @@ namespace awp
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(188, 87);
+            this.label5.Location = new System.Drawing.Point(159, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 23);
+            this.label5.Size = new System.Drawing.Size(72, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "DBMS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(187, 200);
+            this.label4.Location = new System.Drawing.Point(158, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 23);
+            this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Database";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(187, 170);
+            this.label3.Location = new System.Drawing.Point(158, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 23);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(187, 142);
+            this.label2.Location = new System.Drawing.Point(158, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Login";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(188, 114);
+            this.label1.Location = new System.Drawing.Point(159, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 23);
+            this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Server";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // buttonConnect
             // 
+            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonConnect.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonConnect.Enabled = false;
             this.buttonConnect.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.buttonConnect.ForeColor = System.Drawing.Color.Black;
-            this.buttonConnect.Location = new System.Drawing.Point(256, 227);
+            this.buttonConnect.Location = new System.Drawing.Point(237, 241);
             this.buttonConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(136, 28);
@@ -147,8 +156,9 @@ namespace awp
             // 
             // textBox5
             // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(256, 200);
+            this.textBox5.Location = new System.Drawing.Point(237, 214);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(136, 22);
@@ -156,8 +166,9 @@ namespace awp
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(256, 172);
+            this.textBox4.Location = new System.Drawing.Point(237, 186);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(136, 22);
@@ -167,8 +178,9 @@ namespace awp
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(256, 143);
+            this.textBox3.Location = new System.Drawing.Point(237, 157);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(136, 22);
@@ -177,8 +189,9 @@ namespace awp
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(354, 115);
+            this.textBox2.Location = new System.Drawing.Point(335, 129);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(38, 22);
@@ -187,8 +200,9 @@ namespace awp
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(256, 115);
+            this.textBox1.Location = new System.Drawing.Point(237, 129);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(92, 22);
@@ -197,45 +211,52 @@ namespace awp
             // 
             // buttonAddConnection
             // 
+            this.buttonAddConnection.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.buttonAddConnection.FlatAppearance.BorderSize = 0;
+            this.buttonAddConnection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.buttonAddConnection.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.buttonAddConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddConnection.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.buttonAddConnection.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.buttonAddConnection.IconColor = System.Drawing.Color.Pink;
-            this.buttonAddConnection.IconSize = 27;
-            this.buttonAddConnection.Location = new System.Drawing.Point(10, 6);
+            this.buttonAddConnection.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.buttonAddConnection.IconColor = System.Drawing.Color.White;
+            this.buttonAddConnection.IconSize = 30;
+            this.buttonAddConnection.Location = new System.Drawing.Point(0, 5);
             this.buttonAddConnection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddConnection.Name = "buttonAddConnection";
             this.buttonAddConnection.Rotation = 0D;
-            this.buttonAddConnection.Size = new System.Drawing.Size(40, 37);
+            this.buttonAddConnection.Size = new System.Drawing.Size(45, 45);
             this.buttonAddConnection.TabIndex = 1;
-            this.buttonAddConnection.UseVisualStyleBackColor = true;
+            this.buttonAddConnection.UseVisualStyleBackColor = false;
             this.buttonAddConnection.Click += new System.EventHandler(this.buttonAddConnection_Click);
             // 
             // btnTabDb
             // 
+            this.btnTabDb.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (31)))), ((int) (((byte) (37)))), ((int) (((byte) (47)))));
             this.btnTabDb.FlatAppearance.BorderSize = 0;
             this.btnTabDb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTabDb.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTabDb.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.btnTabDb.ForeColor = System.Drawing.Color.White;
             this.btnTabDb.IconChar = FontAwesome.Sharp.IconChar.Database;
-            this.btnTabDb.IconColor = System.Drawing.Color.Yellow;
+            this.btnTabDb.IconColor = System.Drawing.Color.Aqua;
             this.btnTabDb.IconSize = 20;
-            this.btnTabDb.Location = new System.Drawing.Point(10, 6);
+            this.btnTabDb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTabDb.Location = new System.Drawing.Point(0, 5);
             this.btnTabDb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTabDb.Name = "btnTabDb";
             this.btnTabDb.Rotation = 0D;
-            this.btnTabDb.Size = new System.Drawing.Size(120, 37);
+            this.btnTabDb.Size = new System.Drawing.Size(120, 45);
             this.btnTabDb.TabIndex = 0;
             this.btnTabDb.Text = "Connect";
             this.btnTabDb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTabDb.UseVisualStyleBackColor = true;
+            this.btnTabDb.UseVisualStyleBackColor = false;
             this.btnTabDb.Visible = false;
             // 
             // panelAddConnection
             // 
+            this.panelAddConnection.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panelAddConnection.BackColor = System.Drawing.Color.White;
+            this.panelAddConnection.Controls.Add(this.ucDbTab1);
             this.panelAddConnection.Controls.Add(this.textBox1);
             this.panelAddConnection.Controls.Add(this.textBox2);
             this.panelAddConnection.Controls.Add(this.textBox3);
@@ -249,31 +270,33 @@ namespace awp
             this.panelAddConnection.Controls.Add(this.comboDBMS);
             this.panelAddConnection.Controls.Add(this.checkPort);
             this.panelAddConnection.Controls.Add(this.buttonConnect);
-            this.panelAddConnection.Location = new System.Drawing.Point(7, 43);
+            this.panelAddConnection.Location = new System.Drawing.Point(0, 50);
             this.panelAddConnection.Name = "panelAddConnection";
-            this.panelAddConnection.Size = new System.Drawing.Size(606, 365);
+            this.panelAddConnection.Size = new System.Drawing.Size(595, 395);
             this.panelAddConnection.TabIndex = 2;
             // 
             // ucDbTab1
             // 
+            this.ucDbTab1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.ucDbTab1.BackColor = System.Drawing.Color.White;
-            this.ucDbTab1.Location = new System.Drawing.Point(7, 43);
+            this.ucDbTab1.Location = new System.Drawing.Point(0, 0);
             this.ucDbTab1.Margin = new System.Windows.Forms.Padding(4);
             this.ucDbTab1.Name = "ucDbTab1";
-            this.ucDbTab1.Size = new System.Drawing.Size(606, 365);
-            this.ucDbTab1.TabIndex = 8;
+            this.ucDbTab1.Size = new System.Drawing.Size(595, 395);
+            this.ucDbTab1.TabIndex = 3;
+            this.ucDbTab1.Visible = false;
             // 
             // ucDB
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (47)))), ((int) (((byte) (69)))), ((int) (((byte) (80)))));
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.Controls.Add(this.panelAddConnection);
-            this.Controls.Add(this.ucDbTab1);
             this.Controls.Add(this.buttonAddConnection);
             this.Controls.Add(this.btnTabDb);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucDB";
-            this.Size = new System.Drawing.Size(620, 415);
+            this.Size = new System.Drawing.Size(600, 450);
             this.panelAddConnection.ResumeLayout(false);
             this.panelAddConnection.PerformLayout();
             this.ResumeLayout(false);

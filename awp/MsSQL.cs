@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public class MsSQL
+    internal class MsSQL
     {
         public static  SqlConnection conn;
 

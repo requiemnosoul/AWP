@@ -61,7 +61,7 @@ namespace awp
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDbTab";
-            this.Size = new System.Drawing.Size(606, 365);
+            this.Size = new System.Drawing.Size(564, 387);
             this.ResumeLayout(false);
         }
 
