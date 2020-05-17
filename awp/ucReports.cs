@@ -2,9 +2,9 @@ using System.Windows.Forms;
 
 namespace awp
 {
-    public partial class ucReports : UserControl
+    internal partial class ucReports : UserControl
     {
-        public ucReports()
+        internal ucReports()
         {
             InitializeComponent();
         }

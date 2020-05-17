@@ -66,12 +66,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(103, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -135,7 +135,7 @@ namespace awp
             this.aboutButton.IconColor = System.Drawing.Color.White;
             this.aboutButton.IconSize = 30;
             this.aboutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutButton.Location = new System.Drawing.Point(0, 432);
+            this.aboutButton.Location = new System.Drawing.Point(0, 411);
             this.aboutButton.Name = "aboutButton";
             this.aboutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.aboutButton.Rotation = 0D;
@@ -211,7 +211,7 @@ namespace awp
             this.awpButton.FlatAppearance.BorderSize = 0;
             this.awpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.awpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.awpButton.Font = new System.Drawing.Font("Chiller", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.awpButton.Font = new System.Drawing.Font("Chiller", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.awpButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
             this.awpButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.awpButton.IconColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
@@ -241,7 +241,7 @@ namespace awp
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 482);
+            this.panelMenu.Size = new System.Drawing.Size(200, 461);
             this.panelMenu.TabIndex = 0;
             // 
             // panel1
@@ -258,7 +258,7 @@ namespace awp
             this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucAbout1.Location = new System.Drawing.Point(200, 0);
             this.ucAbout1.Name = "ucAbout1";
-            this.ucAbout1.Size = new System.Drawing.Size(657, 482);
+            this.ucAbout1.Size = new System.Drawing.Size(584, 461);
             this.ucAbout1.TabIndex = 1;
             // 
             // ucSettings1
@@ -267,7 +267,7 @@ namespace awp
             this.ucSettings1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucSettings1.Location = new System.Drawing.Point(200, 0);
             this.ucSettings1.Name = "ucSettings1";
-            this.ucSettings1.Size = new System.Drawing.Size(657, 482);
+            this.ucSettings1.Size = new System.Drawing.Size(584, 461);
             this.ucSettings1.TabIndex = 3;
             // 
             // ucDump1
@@ -276,7 +276,7 @@ namespace awp
             this.ucDump1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDump1.Location = new System.Drawing.Point(200, 0);
             this.ucDump1.Name = "ucDump1";
-            this.ucDump1.Size = new System.Drawing.Size(657, 482);
+            this.ucDump1.Size = new System.Drawing.Size(584, 461);
             this.ucDump1.TabIndex = 4;
             // 
             // ucDB1
@@ -288,7 +288,7 @@ namespace awp
             this.ucDB1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ucDB1.Name = "ucDB1";
             this.ucDB1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ucDB1.Size = new System.Drawing.Size(657, 482);
+            this.ucDB1.Size = new System.Drawing.Size(584, 461);
             this.ucDB1.TabIndex = 5;
             // 
             // ucReports1
@@ -296,8 +296,9 @@ namespace awp
             this.ucReports1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucReports1.Location = new System.Drawing.Point(200, 0);
+            this.ucReports1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucReports1.Name = "ucReports1";
-            this.ucReports1.Size = new System.Drawing.Size(657, 482);
+            this.ucReports1.Size = new System.Drawing.Size(584, 461);
             this.ucReports1.TabIndex = 6;
             // 
             // ucHome1
@@ -307,14 +308,14 @@ namespace awp
             this.ucHome1.Location = new System.Drawing.Point(200, 0);
             this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(657, 482);
+            this.ucHome1.Size = new System.Drawing.Size(584, 461);
             this.ucHome1.TabIndex = 7;
             // 
             // AwpForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(857, 482);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucReports1);
             this.Controls.Add(this.ucDB1);
@@ -325,7 +326,7 @@ namespace awp
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(19, 19);
-            this.MinimumSize = new System.Drawing.Size(218, 397);
+            this.MinimumSize = new System.Drawing.Size(216, 389);
             this.Name = "AwpForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

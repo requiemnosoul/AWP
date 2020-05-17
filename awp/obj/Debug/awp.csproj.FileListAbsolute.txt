@@ -119,7 +119,6 @@ S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucAbout.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucDB.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucDump.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucHome.resources
-S:\osu\Automated WorkPlace\awp\obj\Debug\awp.LoginForm.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.Properties.Resources.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucSettings.resources
 S:\osu\Automated WorkPlace\awp\obj\Debug\awp.csproj.GenerateResource.cache
@@ -173,3 +172,4 @@ X:\Automated WorkPlace\awp\obj\Debug\awp.csproj.CopyComplete
 X:\Automated WorkPlace\awp\obj\Debug\awp.exe
 X:\Automated WorkPlace\awp\obj\Debug\awp.pdb
 X:\Automated WorkPlace\awp\obj\Debug\awp.ucReports.resources
+S:\osu\Automated WorkPlace\awp\obj\Debug\awp.ucReports.resources

@@ -48,11 +48,12 @@ namespace awp
             // 
             this.label1.Font = new System.Drawing.Font("Chiller", 25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 47);
+            this.label1.Size = new System.Drawing.Size(100, 50);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucHome
             // 
