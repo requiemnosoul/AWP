@@ -50,7 +50,6 @@ namespace awp
             this.ucSettings1 = new awp.ucSettings();
             this.ucDump1 = new awp.ucDump();
             this.ucDB1 = new awp.ucDB();
-            this.ucReports1 = new awp.ucReports();
             this.ucHome1 = new awp.ucHome();
             this.contextMenuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -66,12 +65,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(103, 28);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -296,7 +295,7 @@ namespace awp
             this.ucReports1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
             this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucReports1.Location = new System.Drawing.Point(200, 0);
-            this.ucReports1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucReports1.Margin = new System.Windows.Forms.Padding(2);
             this.ucReports1.Name = "ucReports1";
             this.ucReports1.Size = new System.Drawing.Size(584, 461);
             this.ucReports1.TabIndex = 6;

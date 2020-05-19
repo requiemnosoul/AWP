@@ -74,7 +74,7 @@ namespace awp
             this.comboDBMS.Items.AddRange(new object[] {"MySQL", "MS SQL Server"});
             this.comboDBMS.Location = new System.Drawing.Point(230, 100);
             this.comboDBMS.Name = "comboDBMS";
-            this.comboDBMS.Size = new System.Drawing.Size(136, 21);
+            this.comboDBMS.Size = new System.Drawing.Size(136, 24);
             this.comboDBMS.TabIndex = 5;
             this.comboDBMS.SelectionChangeCommitted += new System.EventHandler(this.comboDBMS_SelectionChangeCommitted);
             // 
@@ -161,7 +161,7 @@ namespace awp
             this.textBox5.Location = new System.Drawing.Point(230, 214);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 20);
+            this.textBox5.Size = new System.Drawing.Size(136, 22);
             this.textBox5.TabIndex = 3;
             // 
             // textBox4
@@ -171,7 +171,7 @@ namespace awp
             this.textBox4.Location = new System.Drawing.Point(230, 186);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 20);
+            this.textBox4.Size = new System.Drawing.Size(136, 22);
             this.textBox4.TabIndex = 2;
             this.textBox4.Text = "root";
             this.textBox4.UseSystemPasswordChar = true;
@@ -183,7 +183,7 @@ namespace awp
             this.textBox3.Location = new System.Drawing.Point(230, 157);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
+            this.textBox3.Size = new System.Drawing.Size(136, 22);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "root";
             // 
@@ -194,7 +194,7 @@ namespace awp
             this.textBox2.Location = new System.Drawing.Point(328, 129);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 20);
+            this.textBox2.Size = new System.Drawing.Size(38, 22);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "3306";
             // 
@@ -205,7 +205,7 @@ namespace awp
             this.textBox1.Location = new System.Drawing.Point(230, 129);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 20);
+            this.textBox1.Size = new System.Drawing.Size(92, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "localhost";
             // 
