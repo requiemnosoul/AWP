@@ -51,6 +51,7 @@ namespace awp
             this.ucDump1 = new awp.ucDump();
             this.ucDB1 = new awp.ucDB();
             this.ucHome1 = new awp.ucHome();
+            this.ucReports1 = new awp.ucReports();
             this.contextMenuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +66,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(103, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -88,7 +89,7 @@ namespace awp
             this.dbButton.FlatAppearance.BorderSize = 0;
             this.dbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dbButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dbButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.dbButton.IconChar = FontAwesome.Sharp.IconChar.Database;
             this.dbButton.IconColor = System.Drawing.Color.White;
             this.dbButton.IconSize = 30;
@@ -108,7 +109,7 @@ namespace awp
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.homeButton.IconColor = System.Drawing.Color.White;
             this.homeButton.IconSize = 30;
@@ -129,7 +130,7 @@ namespace awp
             this.aboutButton.FlatAppearance.BorderSize = 0;
             this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aboutButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.aboutButton.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.aboutButton.IconChar = FontAwesome.Sharp.IconChar.QuestionCircle;
             this.aboutButton.IconColor = System.Drawing.Color.White;
             this.aboutButton.IconSize = 30;
@@ -149,7 +150,7 @@ namespace awp
             this.reportsButton.FlatAppearance.BorderSize = 0;
             this.reportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reportsButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.reportsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.reportsButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.reportsButton.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.reportsButton.IconColor = System.Drawing.Color.White;
             this.reportsButton.IconSize = 30;
@@ -169,7 +170,7 @@ namespace awp
             this.dumpButton.FlatAppearance.BorderSize = 0;
             this.dumpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dumpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.dumpButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.dumpButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.dumpButton.IconChar = FontAwesome.Sharp.IconChar.Copy;
             this.dumpButton.IconColor = System.Drawing.Color.White;
             this.dumpButton.IconSize = 30;
@@ -180,7 +181,7 @@ namespace awp
             this.dumpButton.Rotation = 0D;
             this.dumpButton.Size = new System.Drawing.Size(200, 50);
             this.dumpButton.TabIndex = 5;
-            this.dumpButton.Text = "Dump     ";
+            this.dumpButton.Text = "Backup   ";
             this.dumpButton.UseVisualStyleBackColor = true;
             this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
@@ -189,7 +190,7 @@ namespace awp
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.settingsButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.settingsButton.IconColor = System.Drawing.Color.White;
             this.settingsButton.IconSize = 30;
@@ -290,16 +291,6 @@ namespace awp
             this.ucDB1.Size = new System.Drawing.Size(584, 461);
             this.ucDB1.TabIndex = 5;
             // 
-            // ucReports1
-            // 
-            this.ucReports1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
-            this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucReports1.Location = new System.Drawing.Point(200, 0);
-            this.ucReports1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucReports1.Name = "ucReports1";
-            this.ucReports1.Size = new System.Drawing.Size(584, 461);
-            this.ucReports1.TabIndex = 6;
-            // 
             // ucHome1
             // 
             this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
@@ -310,13 +301,23 @@ namespace awp
             this.ucHome1.Size = new System.Drawing.Size(584, 461);
             this.ucHome1.TabIndex = 7;
             // 
+            // ucReports1
+            // 
+            this.ucReports1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucReports1.Location = new System.Drawing.Point(200, 0);
+            this.ucReports1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucReports1.Name = "ucReports1";
+            this.ucReports1.Size = new System.Drawing.Size(584, 461);
+            this.ucReports1.TabIndex = 8;
+            // 
             // AwpForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucReports1);
+            this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucDB1);
             this.Controls.Add(this.ucDump1);
             this.Controls.Add(this.ucSettings1);

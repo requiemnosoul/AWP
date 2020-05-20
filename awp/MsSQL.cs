@@ -20,7 +20,6 @@ namespace awp
                 try
                 {
                     conn.Open();
-                    ucDB1.successfulConnection(db);
                 }
                 catch (SqlException ex)
                 {

@@ -11,9 +11,10 @@ namespace awp
     internal partial class ucDB : UserControl
     {
         private Dictionary<IconButton, UserControl> tabs = new Dictionary<IconButton, UserControl>();
-        private  Stack<Panel> pnlDivide = new Stack<Panel>();
+        private Stack<Panel> pnlDivide = new Stack<Panel>();
+        private string[] connArray;
         
-        public static string serv = "localhost", login = "root", pass = "Nanaka810", db = "mysql", port = "3306";
+        public static string serv = "localhost", login = "root", pass = "root", db = "mysql", port = "3306";
 
         public ucDB()
         {
@@ -40,13 +41,8 @@ namespace awp
                 login = textBox3.Text;
                 pass = textBox4.Text;
                 db = textBox5.Text;
+                connArray = new[] {serv, port, login, pass, db};
                 ConnectionDB();
-        }
-
-        public void successfulConnection(string db)
-        {
-            MessageBox.Show("Nice");
-            newConnTab(db);
         }
         
         void ConnectionDB()
@@ -54,8 +50,6 @@ namespace awp
             switch (comboDBMS.Text)
             {
                 case "MySQL":
-                    //MySQL c = new MySQL();
-                    //MySQL.Connection(serv, login, pass, db, port);
                     ConnectionMySql(serv, login, pass, db, port);
                     break;
                 case "MS SQL Server":
@@ -116,9 +110,8 @@ namespace awp
             B.Click += btnTabDb_Click;
             Controls.Add(B);
             
-            UserControl ucTab = new ucDbTab();
+            UserControl ucTab = new ucDbTab(comboDBMS.Text, connArray);
             ucTab.Name = "tab_" + _db;
-            ucTab.Controls[0].Text += _db;
             ucTab.Location = panelAddConnection.Location;
             ucTab.Bounds = new Rectangle(panelAddConnection.Location, panelAddConnection.Size);
             ucTab.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
@@ -199,6 +192,11 @@ namespace awp
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
             }
         }
     }

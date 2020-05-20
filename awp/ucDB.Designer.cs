@@ -49,7 +49,6 @@ namespace awp
             this.buttonAddConnection = new FontAwesome.Sharp.IconButton();
             this.btnTabDb = new FontAwesome.Sharp.IconButton();
             this.panelAddConnection = new System.Windows.Forms.Panel();
-            this.ucDbTab1 = new awp.ucDbTab();
             this.panelAddConnection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +57,7 @@ namespace awp
             this.checkPort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkPort.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.checkPort.ForeColor = System.Drawing.Color.Black;
-            this.checkPort.Location = new System.Drawing.Point(372, 122);
+            this.checkPort.Location = new System.Drawing.Point(372, 123);
             this.checkPort.Name = "checkPort";
             this.checkPort.Size = new System.Drawing.Size(108, 38);
             this.checkPort.TabIndex = 7;
@@ -70,20 +69,21 @@ namespace awp
             // 
             this.comboDBMS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboDBMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboDBMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.comboDBMS.FormattingEnabled = true;
             this.comboDBMS.Items.AddRange(new object[] {"MySQL", "MS SQL Server"});
             this.comboDBMS.Location = new System.Drawing.Point(230, 100);
             this.comboDBMS.Name = "comboDBMS";
-            this.comboDBMS.Size = new System.Drawing.Size(136, 24);
+            this.comboDBMS.Size = new System.Drawing.Size(136, 23);
             this.comboDBMS.TabIndex = 5;
             this.comboDBMS.SelectionChangeCommitted += new System.EventHandler(this.comboDBMS_SelectionChangeCommitted);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(152, 101);
+            this.label5.Location = new System.Drawing.Point(152, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 23);
             this.label5.TabIndex = 3;
@@ -93,9 +93,9 @@ namespace awp
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(151, 214);
+            this.label4.Location = new System.Drawing.Point(152, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 3;
@@ -105,9 +105,9 @@ namespace awp
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(151, 185);
+            this.label3.Location = new System.Drawing.Point(152, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 3;
@@ -117,9 +117,9 @@ namespace awp
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(151, 156);
+            this.label2.Location = new System.Drawing.Point(152, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 3;
@@ -129,13 +129,13 @@ namespace awp
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(152, 128);
+            this.label1.Location = new System.Drawing.Point(152, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Server";
+            this.label1.Text = "Host";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // buttonConnect
@@ -143,7 +143,7 @@ namespace awp
             this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonConnect.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonConnect.Enabled = false;
-            this.buttonConnect.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonConnect.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.buttonConnect.ForeColor = System.Drawing.Color.Black;
             this.buttonConnect.Location = new System.Drawing.Point(230, 241);
             this.buttonConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,20 +158,22 @@ namespace awp
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Enabled = false;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.textBox5.Location = new System.Drawing.Point(230, 214);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 22);
+            this.textBox5.Size = new System.Drawing.Size(136, 21);
             this.textBox5.TabIndex = 3;
             // 
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.textBox4.Location = new System.Drawing.Point(230, 186);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 22);
+            this.textBox4.Size = new System.Drawing.Size(136, 21);
             this.textBox4.TabIndex = 2;
             this.textBox4.Text = "root";
             this.textBox4.UseSystemPasswordChar = true;
@@ -180,10 +182,11 @@ namespace awp
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Enabled = false;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.textBox3.Location = new System.Drawing.Point(230, 157);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 22);
+            this.textBox3.Size = new System.Drawing.Size(136, 21);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "root";
             // 
@@ -191,10 +194,11 @@ namespace awp
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.textBox2.Location = new System.Drawing.Point(328, 129);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 22);
+            this.textBox2.Size = new System.Drawing.Size(38, 21);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "3306";
             // 
@@ -202,10 +206,11 @@ namespace awp
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.textBox1.Location = new System.Drawing.Point(230, 129);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 22);
+            this.textBox1.Size = new System.Drawing.Size(92, 21);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "localhost";
             // 
@@ -274,23 +279,11 @@ namespace awp
             this.panelAddConnection.Size = new System.Drawing.Size(595, 395);
             this.panelAddConnection.TabIndex = 2;
             // 
-            // ucDbTab1
-            // 
-            this.ucDbTab1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucDbTab1.BackColor = System.Drawing.Color.White;
-            this.ucDbTab1.Location = new System.Drawing.Point(0, 50);
-            this.ucDbTab1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucDbTab1.Name = "ucDbTab1";
-            this.ucDbTab1.Size = new System.Drawing.Size(595, 395);
-            this.ucDbTab1.TabIndex = 3;
-            this.ucDbTab1.Visible = false;
-            // 
             // ucDB
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
-            this.Controls.Add(this.ucDbTab1);
             this.Controls.Add(this.panelAddConnection);
             this.Controls.Add(this.buttonAddConnection);
             this.Controls.Add(this.btnTabDb);
@@ -318,7 +311,6 @@ namespace awp
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private awp.ucDbTab ucDbTab1;
 
         #endregion
     }

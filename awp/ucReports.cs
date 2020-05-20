@@ -4,7 +4,7 @@ namespace awp
 {
     internal partial class ucReports : UserControl
     {
-        internal ucReports()
+        public ucReports()
         {
             InitializeComponent();
         }
