@@ -43,8 +43,10 @@ namespace awp
             this.txtLD = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.Label();
+            this.txtSize = new System.Windows.Forms.Label();
             this.txtDB = new System.Windows.Forms.Label();
             this.txtDBMS = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxTime = new System.Windows.Forms.GroupBox();
@@ -143,9 +145,11 @@ namespace awp
             this.groupBox1.Controls.Add(this.txtLD);
             this.groupBox1.Controls.Add(this.txtHost);
             this.groupBox1.Controls.Add(this.txtUser);
+            this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.txtDB);
             this.groupBox1.Controls.Add(this.txtDBMS);
             this.groupBox1.Controls.Add(this.labelDBMS);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.labelDB);
             this.groupBox1.Controls.Add(this.labelSV);
             this.groupBox1.Controls.Add(this.labelLD);
@@ -217,6 +221,16 @@ namespace awp
             this.txtUser.TabIndex = 2;
             this.txtUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtSize
+            // 
+            this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtSize.ForeColor = System.Drawing.Color.Black;
+            this.txtSize.Location = new System.Drawing.Point(253, 60);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(63, 23);
+            this.txtSize.TabIndex = 2;
+            this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtDB
             // 
             this.txtDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -236,6 +250,16 @@ namespace awp
             this.txtDBMS.Size = new System.Drawing.Size(103, 23);
             this.txtDBMS.TabIndex = 2;
             this.txtDBMS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(171, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Size in (MB): ";
             // 
             // groupBox2
             // 
@@ -522,6 +546,7 @@ namespace awp
         private System.Windows.Forms.GroupBox groupBoxTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelDB;
         private System.Windows.Forms.Label labelDBMS;
         private System.Windows.Forms.Label labelHost;
@@ -538,6 +563,7 @@ namespace awp
         private System.Windows.Forms.Label txtDBMS;
         private System.Windows.Forms.Label txtHost;
         private System.Windows.Forms.Label txtLD;
+        private System.Windows.Forms.Label txtSize;
         private System.Windows.Forms.Label txtSV;
         private System.Windows.Forms.Label txtUser;
 

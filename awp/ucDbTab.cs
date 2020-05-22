@@ -7,14 +7,20 @@ namespace awp
     internal partial class ucDbTab : UserControl
     {
         private string[] connArray; 
-        private string sql = "select version()";
+        private string sqlVersion = "select version()";
+        private string sqlSize;
+        
         public ucDbTab(string DBMS, string [] connArr)
         {
+            sqlSize = 
+                "SELECT ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS \"Size in (MB)\" " +
+                $"FROM information_schema.TABLES WHERE table_schema = \"{connArr[4]}\" GROUP BY table_schema";
             InitializeComponent();
             connArray = connArr; 
             txtDBMS.Text = DBMS;
             txtDB.Text = connArr[4];
-            txtSV.Text = MySQL.myCommand(sql,connArr);
+            txtSV.Text = MySQL.myCommand(sqlVersion,connArr);
+            txtSize.Text = MySQL.myCommand(sqlSize, connArr);
             txtHost.Text = connArr[0];
             txtUser.Text = connArr[2];
             txtLD.Text = "Not have";

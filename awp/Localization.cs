@@ -9,7 +9,7 @@ namespace awp
 {
     internal class Localization
     {
-        public static void Ru()
+        internal static void Ru()
         {
             string[] ruAwpForm = new [] {
                 "Главная     ",
