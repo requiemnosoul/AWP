@@ -120,7 +120,7 @@ namespace awp
             tabs[B] = ucTab;
             
             Panel P = new Panel();
-            P.Size = new Size(2,40);
+            P.Size = new Size(2,45);
             P.BackColor = Color.FromArgb(33, 55, 80);
             P.Location = new Point((tabs.Count * B.Width) - 1,5);
             Controls.Add(P);

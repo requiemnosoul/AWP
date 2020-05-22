@@ -60,11 +60,17 @@ namespace awp
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.buttonPlan = new FontAwesome.Sharp.IconButton();
             this.buttonDump = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.buttonRep = new FontAwesome.Sharp.IconButton();
+            this.dgvStatus = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxTime.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvStatus)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelDB
@@ -79,7 +85,7 @@ namespace awp
             // 
             // buttonRestore
             // 
-            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestore.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.buttonRestore.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
@@ -88,10 +94,10 @@ namespace awp
             this.buttonRestore.IconColor = System.Drawing.Color.Black;
             this.buttonRestore.IconSize = 30;
             this.buttonRestore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRestore.Location = new System.Drawing.Point(174, 257);
+            this.buttonRestore.Location = new System.Drawing.Point(168, 21);
             this.buttonRestore.Name = "buttonRestore";
             this.buttonRestore.Rotation = 0D;
-            this.buttonRestore.Size = new System.Drawing.Size(145, 40);
+            this.buttonRestore.Size = new System.Drawing.Size(157, 40);
             this.buttonRestore.TabIndex = 3;
             this.buttonRestore.Text = "Restore backup";
             this.buttonRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -130,7 +136,7 @@ namespace awp
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.labelHost);
             this.groupBox1.Controls.Add(this.labelUser);
             this.groupBox1.Controls.Add(this.txtSV);
@@ -233,7 +239,7 @@ namespace awp
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.groupBoxTime);
             this.groupBox2.Controls.Add(this.checkBoxTime);
@@ -399,7 +405,7 @@ namespace awp
             // 
             // buttonDump
             // 
-            this.buttonDump.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDump.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDump.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.buttonDump.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
@@ -408,67 +414,112 @@ namespace awp
             this.buttonDump.IconColor = System.Drawing.Color.Black;
             this.buttonDump.IconSize = 30;
             this.buttonDump.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDump.Location = new System.Drawing.Point(9, 257);
+            this.buttonDump.Location = new System.Drawing.Point(6, 21);
             this.buttonDump.Name = "buttonDump";
             this.buttonDump.Rotation = 0D;
-            this.buttonDump.Size = new System.Drawing.Size(115, 40);
+            this.buttonDump.Size = new System.Drawing.Size(156, 40);
             this.buttonDump.TabIndex = 3;
             this.buttonDump.Text = "Dump";
             this.buttonDump.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDump.UseVisualStyleBackColor = true;
             this.buttonDump.Click += new System.EventHandler(this.buttonDump_Click);
             // 
-            // iconButton1
+            // buttonRep
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(361, 257);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(132, 40);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Create report";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.buttonRep.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRep.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.buttonRep.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonRep.ForeColor = System.Drawing.Color.Black;
+            this.buttonRep.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.buttonRep.IconColor = System.Drawing.Color.Black;
+            this.buttonRep.IconSize = 30;
+            this.buttonRep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRep.Location = new System.Drawing.Point(331, 21);
+            this.buttonRep.Name = "buttonRep";
+            this.buttonRep.Rotation = 0D;
+            this.buttonRep.Size = new System.Drawing.Size(157, 40);
+            this.buttonRep.TabIndex = 3;
+            this.buttonRep.Text = "Create report";
+            this.buttonRep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRep.UseVisualStyleBackColor = true;
+            // 
+            // dgvStatus
+            // 
+            this.dgvStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvStatus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvStatus.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStatus.Location = new System.Drawing.Point(6, 21);
+            this.dgvStatus.MaximumSize = new System.Drawing.Size(481, 152);
+            this.dgvStatus.Name = "dgvStatus";
+            this.dgvStatus.RowHeadersVisible = false;
+            this.dgvStatus.RowTemplate.Height = 24;
+            this.dgvStatus.Size = new System.Drawing.Size(481, 152);
+            this.dgvStatus.TabIndex = 6;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox4.Controls.Add(this.dgvStatus);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.groupBox4.Location = new System.Drawing.Point(3, 257);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(494, 179);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Database status";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox5.Controls.Add(this.buttonDump);
+            this.groupBox5.Controls.Add(this.buttonRestore);
+            this.groupBox5.Controls.Add(this.buttonRep);
+            this.groupBox5.Location = new System.Drawing.Point(3, 442);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(494, 71);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Action";
             // 
             // ucDbTab
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.buttonDump);
-            this.Controls.Add(this.buttonRestore);
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDbTab";
-            this.Size = new System.Drawing.Size(500, 306);
+            this.Size = new System.Drawing.Size(500, 518);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBoxTime.ResumeLayout(false);
             this.groupBoxTime.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dgvStatus)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         private FontAwesome.Sharp.IconButton buttonDump;
         private FontAwesome.Sharp.IconButton buttonPlan;
+        private FontAwesome.Sharp.IconButton buttonRep;
         private FontAwesome.Sharp.IconButton buttonRestore;
         private System.Windows.Forms.CheckBox checkBoxTime;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvStatus;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBoxTime;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelDB;

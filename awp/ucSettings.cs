@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace awp
 {
@@ -7,6 +8,14 @@ namespace awp
         public ucSettings()
         {
             InitializeComponent();
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            if(rbEn.Checked)
+                Localization.En();
+            if(rbRu.Checked)
+                Localization.Ru();
         }
     }
 }

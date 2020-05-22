@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace awp
@@ -17,6 +18,13 @@ namespace awp
             txtHost.Text = connArr[0];
             txtUser.Text = connArr[2];
             txtLD.Text = "Not have";
+            dgvStatus.DataSource = MySQL.statusMySql(connArr);
+            dgvStatus.Height = dgvStatus.Rows.GetRowsHeight(DataGridViewElementStates.Visible) +
+                                   dgvStatus.ColumnHeadersHeight;
+            dgvStatus.Width = dgvStatus.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) +
+                                  dgvStatus.RowHeadersWidth;
+            groupBox4.Height = dgvStatus.Location.Y + dgvStatus.Height + dgvStatus.Location.X;
+            groupBox5.Location = new Point(groupBox5.Location.X, groupBox4.Location.Y + groupBox4.Height + 5);
         }
 
         private void buttonRestore_Click(object sender, EventArgs e)
@@ -24,7 +32,6 @@ namespace awp
             string serv = connArray[0], login = connArray[2], pass = connArray[3], db = connArray[4];
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "SQL files (*.sql)|*.sql";
-            //ofd.FileName = db + "_dump_" + DateTime.Now.ToShortDateString().Replace(".", "_");
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 ofd.FileName = "\"" + ofd.FileName + "\"";

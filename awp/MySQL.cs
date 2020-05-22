@@ -19,7 +19,7 @@ namespace awp
                 try
                 {
                     conn.Open();
-                    //ucDB1.newConnTab(db);
+                    ucDB1.newConnTab(db);
                 }
                 catch (MySqlException ex)
                 {
@@ -48,6 +48,24 @@ namespace awp
             conn.Close();
 
             return result;
+        }
+        public static DataTable statusMySql(string[] connArr)
+        {
+            string sql = $"show table status from {connArr[4]}";
+            string myConnectionString = $"Server={connArr[0]}; Port={connArr[1]}; Uid={connArr[2]}; Pwd={connArr[3]}; Database={connArr[4]}";
+            MySqlConnection conn = new MySqlConnection(myConnectionString);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(sql,conn);
+            DataTable dt = new DataTable();
+            using (MySqlDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                }
+            }
+            conn.Close();
+            return dt;
         }
     }
 }

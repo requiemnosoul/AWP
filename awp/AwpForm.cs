@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
 namespace awp
 {
-    internal partial class AwpForm : Form
+    public partial class AwpForm : Form
     {
+        public static List<Control> cnt = new List<Control>();
         private readonly Queue<IconButton> _currentButton = new Queue<IconButton>();
         internal AwpForm()
         {
@@ -16,6 +18,11 @@ namespace awp
             panelMenu.Controls.Add(sidePanel);
             sidePanel.BringToFront();
             ucHome1.BringToFront();
+            foreach (Control control in panelMenu.Controls)
+            {
+                if(control is IconButton)
+                    cnt.Add(control);
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

@@ -134,6 +134,7 @@
     <Compile Include="CloseForm.Designer.cs">
       <DependentUpon>CloseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Localization.cs" />
     <Compile Include="MsSQL.cs" />
     <Compile Include="ucAbout.cs">
       <SubType>UserControl</SubType>
