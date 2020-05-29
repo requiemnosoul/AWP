@@ -81,16 +81,16 @@ namespace awp
             this.labelDB.ForeColor = System.Drawing.Color.Black;
             this.labelDB.Location = new System.Drawing.Point(171, 18);
             this.labelDB.Name = "labelDB";
-            this.labelDB.Size = new System.Drawing.Size(69, 23);
+            this.labelDB.Size = new System.Drawing.Size(97, 23);
             this.labelDB.TabIndex = 2;
-            this.labelDB.Text = "Database: ";
+            this.labelDB.Text = "База данных:";
             // 
             // buttonRestore
             // 
             this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestore.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.buttonRestore.ForeColor = System.Drawing.Color.Black;
             this.buttonRestore.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.buttonRestore.IconColor = System.Drawing.Color.Black;
@@ -101,7 +101,7 @@ namespace awp
             this.buttonRestore.Rotation = 0D;
             this.buttonRestore.Size = new System.Drawing.Size(157, 40);
             this.buttonRestore.TabIndex = 3;
-            this.buttonRestore.Text = "Restore backup";
+            this.buttonRestore.Text = "Восстановить резервную копию";
             this.buttonRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRestore.UseVisualStyleBackColor = true;
             this.buttonRestore.Click += new System.EventHandler(this.buttonRestore_Click);
@@ -114,7 +114,7 @@ namespace awp
             this.labelDBMS.Name = "labelDBMS";
             this.labelDBMS.Size = new System.Drawing.Size(50, 23);
             this.labelDBMS.TabIndex = 2;
-            this.labelDBMS.Text = "DBMS:";
+            this.labelDBMS.Text = "СУБД:";
             // 
             // labelSV
             // 
@@ -122,9 +122,9 @@ namespace awp
             this.labelSV.ForeColor = System.Drawing.Color.Black;
             this.labelSV.Location = new System.Drawing.Point(6, 64);
             this.labelSV.Name = "labelSV";
-            this.labelSV.Size = new System.Drawing.Size(98, 23);
+            this.labelSV.Size = new System.Drawing.Size(110, 23);
             this.labelSV.TabIndex = 2;
-            this.labelSV.Text = "Server version: ";
+            this.labelSV.Text = "Версия сервера:";
             // 
             // labelLD
             // 
@@ -132,9 +132,9 @@ namespace awp
             this.labelLD.ForeColor = System.Drawing.Color.Black;
             this.labelLD.Location = new System.Drawing.Point(6, 87);
             this.labelLD.Name = "labelLD";
-            this.labelLD.Size = new System.Drawing.Size(77, 23);
+            this.labelLD.Size = new System.Drawing.Size(119, 23);
             this.labelLD.TabIndex = 2;
-            this.labelLD.Text = "Last dump: ";
+            this.labelLD.Text = "Последний дамп: ";
             // 
             // groupBox1
             // 
@@ -159,7 +159,7 @@ namespace awp
             this.groupBox1.Size = new System.Drawing.Size(494, 115);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DB info";
+            this.groupBox1.Text = "Инофрмация о БД";
             // 
             // labelHost
             // 
@@ -167,9 +167,9 @@ namespace awp
             this.labelHost.ForeColor = System.Drawing.Color.Black;
             this.labelHost.Location = new System.Drawing.Point(6, 41);
             this.labelHost.Name = "labelHost";
-            this.labelHost.Size = new System.Drawing.Size(41, 23);
+            this.labelHost.Size = new System.Drawing.Size(61, 23);
             this.labelHost.TabIndex = 2;
-            this.labelHost.Text = "Host: ";
+            this.labelHost.Text = "Сервер: ";
             // 
             // labelUser
             // 
@@ -177,9 +177,9 @@ namespace awp
             this.labelUser.ForeColor = System.Drawing.Color.Black;
             this.labelUser.Location = new System.Drawing.Point(171, 41);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(40, 23);
+            this.labelUser.Size = new System.Drawing.Size(100, 23);
             this.labelUser.TabIndex = 2;
-            this.labelUser.Text = "User: ";
+            this.labelUser.Text = "Пользователь: ";
             // 
             // txtSV
             // 
@@ -195,7 +195,7 @@ namespace awp
             // 
             this.txtLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtLD.ForeColor = System.Drawing.Color.Black;
-            this.txtLD.Location = new System.Drawing.Point(89, 85);
+            this.txtLD.Location = new System.Drawing.Point(131, 85);
             this.txtLD.Name = "txtLD";
             this.txtLD.Size = new System.Drawing.Size(151, 23);
             this.txtLD.TabIndex = 2;
@@ -205,9 +205,9 @@ namespace awp
             // 
             this.txtHost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtHost.ForeColor = System.Drawing.Color.Black;
-            this.txtHost.Location = new System.Drawing.Point(53, 39);
+            this.txtHost.Location = new System.Drawing.Point(73, 39);
             this.txtHost.Name = "txtHost";
-            this.txtHost.Size = new System.Drawing.Size(112, 23);
+            this.txtHost.Size = new System.Drawing.Size(99, 23);
             this.txtHost.TabIndex = 2;
             this.txtHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -215,7 +215,7 @@ namespace awp
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUser.ForeColor = System.Drawing.Color.Black;
-            this.txtUser.Location = new System.Drawing.Point(217, 39);
+            this.txtUser.Location = new System.Drawing.Point(274, 39);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(127, 23);
             this.txtUser.TabIndex = 2;
@@ -225,7 +225,7 @@ namespace awp
             // 
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtSize.ForeColor = System.Drawing.Color.Black;
-            this.txtSize.Location = new System.Drawing.Point(253, 60);
+            this.txtSize.Location = new System.Drawing.Point(277, 60);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(63, 23);
             this.txtSize.TabIndex = 2;
@@ -235,7 +235,7 @@ namespace awp
             // 
             this.txtDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtDB.ForeColor = System.Drawing.Color.Black;
-            this.txtDB.Location = new System.Drawing.Point(244, 16);
+            this.txtDB.Location = new System.Drawing.Point(262, 16);
             this.txtDB.Name = "txtDB";
             this.txtDB.Size = new System.Drawing.Size(100, 23);
             this.txtDB.TabIndex = 2;
@@ -257,9 +257,9 @@ namespace awp
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(171, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
+            this.label3.Size = new System.Drawing.Size(111, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Size in (MB): ";
+            this.label3.Text = "Размер в (MB): ";
             // 
             // groupBox2
             // 
@@ -276,7 +276,7 @@ namespace awp
             this.groupBox2.Size = new System.Drawing.Size(494, 124);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Planning a backup";
+            this.groupBox2.Text = "Планирование резервных копий";
             // 
             // label2
             // 
@@ -285,7 +285,7 @@ namespace awp
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 25);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Start date:";
+            this.label2.Text = "Начало:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBoxTime
@@ -299,7 +299,7 @@ namespace awp
             this.groupBoxTime.Size = new System.Drawing.Size(83, 45);
             this.groupBoxTime.TabIndex = 10;
             this.groupBoxTime.TabStop = false;
-            this.groupBoxTime.Text = "Time";
+            this.groupBoxTime.Text = "Время";
             // 
             // textBox2
             // 
@@ -337,7 +337,7 @@ namespace awp
             this.checkBoxTime.Name = "checkBoxTime";
             this.checkBoxTime.Size = new System.Drawing.Size(81, 24);
             this.checkBoxTime.TabIndex = 6;
-            this.checkBoxTime.Text = "Set time:";
+            this.checkBoxTime.Text = "Время:";
             this.checkBoxTime.UseVisualStyleBackColor = true;
             this.checkBoxTime.CheckedChanged += new System.EventHandler(this.checkBoxTime_CheckedChanged);
             // 
@@ -352,50 +352,50 @@ namespace awp
             this.groupBox3.Size = new System.Drawing.Size(404, 65);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Regularity";
+            this.groupBox3.Text = "Периодичность";
             // 
             // radioButton4
             // 
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.radioButton4.Location = new System.Drawing.Point(9, 30);
+            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.radioButton4.Location = new System.Drawing.Point(6, 30);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 23);
+            this.radioButton4.Size = new System.Drawing.Size(75, 23);
             this.radioButton4.TabIndex = 4;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Just once";
+            this.radioButton4.Text = "Один раз";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.radioButton3.Location = new System.Drawing.Point(298, 30);
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.radioButton3.Location = new System.Drawing.Point(293, 30);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(105, 23);
             this.radioButton3.TabIndex = 4;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Every month";
+            this.radioButton3.Text = "Каждый месяц";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.radioButton1.Location = new System.Drawing.Point(100, 30);
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.radioButton1.Location = new System.Drawing.Point(87, 30);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 23);
+            this.radioButton1.Size = new System.Drawing.Size(95, 23);
             this.radioButton1.TabIndex = 4;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Every day";
+            this.radioButton1.Text = "Каждый день";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.radioButton2.Location = new System.Drawing.Point(196, 30);
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.radioButton2.Location = new System.Drawing.Point(184, 30);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(96, 23);
+            this.radioButton2.Size = new System.Drawing.Size(109, 23);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Every week";
+            this.radioButton2.Text = "Каждую неделю";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
@@ -417,15 +417,14 @@ namespace awp
             this.buttonPlan.IconColor = System.Drawing.Color.Black;
             this.buttonPlan.IconSize = 30;
             this.buttonPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPlan.Location = new System.Drawing.Point(415, 60);
+            this.buttonPlan.Location = new System.Drawing.Point(416, 60);
             this.buttonPlan.Name = "buttonPlan";
             this.buttonPlan.Rotation = 0D;
             this.buttonPlan.Size = new System.Drawing.Size(75, 58);
             this.buttonPlan.TabIndex = 3;
-            this.buttonPlan.Text = "Plan";
+            this.buttonPlan.Text = "Ок";
             this.buttonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlan.UseVisualStyleBackColor = false;
-            this.buttonPlan.Click += new System.EventHandler(this.buttonPlan_Click);
             // 
             // buttonDump
             // 
@@ -443,8 +442,7 @@ namespace awp
             this.buttonDump.Rotation = 0D;
             this.buttonDump.Size = new System.Drawing.Size(156, 40);
             this.buttonDump.TabIndex = 3;
-            this.buttonDump.Text = "Dump";
-            this.buttonDump.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDump.Text = "Дамп";
             this.buttonDump.UseVisualStyleBackColor = true;
             this.buttonDump.Click += new System.EventHandler(this.buttonDump_Click);
             // 
@@ -464,7 +462,7 @@ namespace awp
             this.buttonRep.Rotation = 0D;
             this.buttonRep.Size = new System.Drawing.Size(157, 40);
             this.buttonRep.TabIndex = 3;
-            this.buttonRep.Text = "Create report";
+            this.buttonRep.Text = "Создать отчет";
             this.buttonRep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRep.UseVisualStyleBackColor = true;
             // 
@@ -492,7 +490,7 @@ namespace awp
             this.groupBox4.Size = new System.Drawing.Size(494, 179);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Database status";
+            this.groupBox4.Text = "Статус БД";
             // 
             // groupBox5
             // 
@@ -505,7 +503,7 @@ namespace awp
             this.groupBox5.Size = new System.Drawing.Size(494, 71);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Action";
+            this.groupBox5.Text = "Действия";
             // 
             // ucDbTab
             // 

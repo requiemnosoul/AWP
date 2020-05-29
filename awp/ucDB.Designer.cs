@@ -61,7 +61,7 @@ namespace awp
             this.checkPort.Name = "checkPort";
             this.checkPort.Size = new System.Drawing.Size(108, 38);
             this.checkPort.TabIndex = 7;
-            this.checkPort.Text = "use port \r\nnon-standart\r\n";
+            this.checkPort.Text = "Выбрать другой порт";
             this.checkPort.UseVisualStyleBackColor = true;
             this.checkPort.CheckedChanged += new System.EventHandler(this.checkPort_CheckedChanged);
             // 
@@ -87,7 +87,7 @@ namespace awp
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 23);
             this.label5.TabIndex = 3;
-            this.label5.Text = "DBMS";
+            this.label5.Text = "СУБД";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -95,11 +95,11 @@ namespace awp
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(152, 214);
+            this.label4.Location = new System.Drawing.Point(144, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.Size = new System.Drawing.Size(80, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Database";
+            this.label4.Text = "База данных";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -111,7 +111,7 @@ namespace awp
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Password";
+            this.label3.Text = "Пароль";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -123,7 +123,7 @@ namespace awp
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Login";
+            this.label2.Text = "Логин";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
@@ -135,7 +135,7 @@ namespace awp
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Host";
+            this.label1.Text = "Сервер";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // buttonConnect
@@ -150,7 +150,7 @@ namespace awp
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(136, 28);
             this.buttonConnect.TabIndex = 4;
-            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.Text = "Подключиться";
             this.buttonConnect.UseVisualStyleBackColor = false;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 

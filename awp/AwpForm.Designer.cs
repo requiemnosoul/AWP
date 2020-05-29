@@ -47,12 +47,12 @@ namespace awp
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.aboutButton = new FontAwesome.Sharp.IconButton();
-            this.ucAbout1 = new awp.ucAbout();
             this.ucSettings1 = new awp.ucSettings();
             this.ucDump1 = new awp.ucDump();
             this.ucDB1 = new awp.ucDB();
             this.ucHome1 = new awp.ucHome();
             this.ucReports1 = new awp.ucReports();
+            this.ucAbout1 = new awp.ucAbout();
             this.contextMenuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -67,12 +67,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -191,10 +191,10 @@ namespace awp
             this.awpButton.FlatAppearance.BorderSize = 0;
             this.awpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.awpButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.awpButton.Font = new System.Drawing.Font("Chiller", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.awpButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
+            this.awpButton.Font = new System.Drawing.Font("Brush Script MT", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.awpButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
             this.awpButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.awpButton.IconColor = System.Drawing.Color.FromArgb(((int) (((byte) (128)))), ((int) (((byte) (255)))), ((int) (((byte) (128)))));
+            this.awpButton.IconColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
             this.awpButton.IconSize = 30;
             this.awpButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.awpButton.Location = new System.Drawing.Point(0, 0);
@@ -253,15 +253,6 @@ namespace awp
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
-            // ucAbout1
-            // 
-            this.ucAbout1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucAbout1.Location = new System.Drawing.Point(200, 0);
-            this.ucAbout1.Name = "ucAbout1";
-            this.ucAbout1.Size = new System.Drawing.Size(584, 536);
-            this.ucAbout1.TabIndex = 1;
-            // 
             // ucSettings1
             // 
             this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
@@ -312,17 +303,26 @@ namespace awp
             this.ucReports1.Size = new System.Drawing.Size(584, 536);
             this.ucReports1.TabIndex = 8;
             // 
+            // ucAbout1
+            // 
+            this.ucAbout1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ucAbout1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucAbout1.Location = new System.Drawing.Point(200, 0);
+            this.ucAbout1.Name = "ucAbout1";
+            this.ucAbout1.Size = new System.Drawing.Size(584, 536);
+            this.ucAbout1.TabIndex = 9;
+            // 
             // AwpForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(784, 536);
+            this.Controls.Add(this.ucAbout1);
             this.Controls.Add(this.ucReports1);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucDB1);
             this.Controls.Add(this.ucDump1);
             this.Controls.Add(this.ucSettings1);
-            this.Controls.Add(this.ucAbout1);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));

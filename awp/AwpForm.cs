@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
@@ -128,7 +127,6 @@ namespace awp
                 awpButton.Padding = new Padding(0,0,0,0);
                 panelMenu.Width = widthMenu;
                 panel1.Location = new Point(panelMenu.Width - panel1.Width,panel1.Location.Y);
-                //awpButton.IconChar = IconChar.Times;
                 awpButton.IconChar = IconChar.None;
                 awpButton.Text = textAwp;
                 aboutButton.Text = textAbout;

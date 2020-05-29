@@ -58,11 +58,6 @@ namespace awp
             }
         }
 
-        private void buttonPlan_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void checkBoxTime_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxTime.Checked)
