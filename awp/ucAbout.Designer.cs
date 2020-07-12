@@ -32,6 +32,7 @@ namespace awp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -48,10 +49,23 @@ namespace awp
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Resize += new System.EventHandler(this.label1_Resize);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (53)))), ((int) (((byte) (75)))), ((int) (((byte) (101)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (255)))), ((int) (((byte) (255)))));
+            this.label2.Location = new System.Drawing.Point(0, 342);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(400, 58);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Рычкова Анастасия Александровна\r\nОльхов Валерий Владимирович\r\nv.1.0\r\n2020";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucAbout
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ucAbout";
             this.Size = new System.Drawing.Size(400, 400);
@@ -59,6 +73,7 @@ namespace awp
         }
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
 
         #endregion
     }

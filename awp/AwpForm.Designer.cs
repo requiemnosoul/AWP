@@ -59,6 +59,8 @@ namespace awp
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon) (resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
@@ -67,12 +69,12 @@ namespace awp
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -101,7 +103,7 @@ namespace awp
             this.dbButton.Rotation = 0D;
             this.dbButton.Size = new System.Drawing.Size(200, 50);
             this.dbButton.TabIndex = 5;
-            this.dbButton.Text = "  Databases";
+            this.dbButton.Text = "        Базы данных";
             this.dbButton.UseVisualStyleBackColor = true;
             this.dbButton.Click += new System.EventHandler(this.dbButton_Click);
             // 
@@ -121,7 +123,7 @@ namespace awp
             this.homeButton.Rotation = 0D;
             this.homeButton.Size = new System.Drawing.Size(200, 50);
             this.homeButton.TabIndex = 5;
-            this.homeButton.Text = "Home     ";
+            this.homeButton.Text = "Главная ";
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
@@ -141,7 +143,7 @@ namespace awp
             this.reportsButton.Rotation = 0D;
             this.reportsButton.Size = new System.Drawing.Size(200, 50);
             this.reportsButton.TabIndex = 5;
-            this.reportsButton.Text = "Reports  ";
+            this.reportsButton.Text = "Отчеты  ";
             this.reportsButton.UseVisualStyleBackColor = true;
             this.reportsButton.Click += new System.EventHandler(this.reportsButton_Click);
             // 
@@ -161,7 +163,7 @@ namespace awp
             this.dumpButton.Rotation = 0D;
             this.dumpButton.Size = new System.Drawing.Size(200, 50);
             this.dumpButton.TabIndex = 5;
-            this.dumpButton.Text = "Backup   ";
+            this.dumpButton.Text = "Бэкап     ";
             this.dumpButton.UseVisualStyleBackColor = true;
             this.dumpButton.Click += new System.EventHandler(this.dumpButton_Click);
             // 
@@ -183,6 +185,7 @@ namespace awp
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "Settings ";
             this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Visible = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // awpButton
@@ -249,7 +252,7 @@ namespace awp
             this.aboutButton.Rotation = 0D;
             this.aboutButton.Size = new System.Drawing.Size(200, 50);
             this.aboutButton.TabIndex = 5;
-            this.aboutButton.Text = "About    ";
+            this.aboutButton.Text = "        О программе";
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 

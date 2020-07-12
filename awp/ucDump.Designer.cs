@@ -89,6 +89,7 @@ namespace awp
             this.checkBox1.TabIndex = 17;
             this.checkBox1.Text = "Выбрать все";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // combo
             // 
@@ -173,6 +174,7 @@ namespace awp
             this.groupBoxTime.TabIndex = 10;
             this.groupBoxTime.TabStop = false;
             this.groupBoxTime.Text = "Время";
+            this.groupBoxTime.Visible = false;
             // 
             // textBox2
             // 
@@ -212,6 +214,7 @@ namespace awp
             this.checkBoxTime.TabIndex = 6;
             this.checkBoxTime.Text = "Время:";
             this.checkBoxTime.UseVisualStyleBackColor = true;
+            this.checkBoxTime.Visible = false;
             // 
             // groupBox3
             // 
@@ -298,6 +301,7 @@ namespace awp
             this.buttonPlan.Text = "Ок";
             this.buttonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlan.UseVisualStyleBackColor = false;
+            this.buttonPlan.Click += new System.EventHandler(this.buttonPlan_Click);
             // 
             // label5
             // 

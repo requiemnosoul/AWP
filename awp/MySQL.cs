@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
@@ -35,16 +36,24 @@ namespace awp
         public static void myRestoreDump(string serv, string login, string pass, string db, string path)
         { 
             string command = $"/c mysql.exe -u {login} -h {serv} -p{pass} {db} < {path}";
-            Process.Start("CMD.exe",command);
+            Process.Start("CMD.exe",command).WaitForExit();
         }
 
         public static string myCommand(string sql,string [] connArr)
         {
+            string result = "0";
             string myConnectionString = $"Server={connArr[0]}; Port={connArr[1]}; Uid={connArr[2]}; Pwd={connArr[3]}; Database={connArr[4]}";
             MySqlConnection conn = new MySqlConnection(myConnectionString);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql,conn);
-            string result = cmd.ExecuteScalar().ToString();
+            try
+            {
+                result = cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
             conn.Close();
 
             return result;

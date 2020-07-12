@@ -71,7 +71,7 @@ namespace awp
             this.comboDBMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDBMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.comboDBMS.FormattingEnabled = true;
-            this.comboDBMS.Items.AddRange(new object[] {"MySQL", "MS SQL Server"});
+            this.comboDBMS.Items.AddRange(new object[] {"MySQL"});
             this.comboDBMS.Location = new System.Drawing.Point(230, 100);
             this.comboDBMS.Name = "comboDBMS";
             this.comboDBMS.Size = new System.Drawing.Size(136, 23);

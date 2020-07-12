@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 namespace awp
 {
     internal class MsSQL

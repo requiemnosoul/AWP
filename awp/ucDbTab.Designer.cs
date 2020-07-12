@@ -42,6 +42,7 @@ namespace awp
             this.txtSV = new System.Windows.Forms.Label();
             this.txtLD = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.Label();
+            this.buttonRefresh = new FontAwesome.Sharp.IconButton();
             this.txtUser = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.Label();
             this.txtDB = new System.Windows.Forms.Label();
@@ -79,7 +80,7 @@ namespace awp
             // 
             this.labelDB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.labelDB.ForeColor = System.Drawing.Color.Black;
-            this.labelDB.Location = new System.Drawing.Point(171, 18);
+            this.labelDB.Location = new System.Drawing.Point(185, 18);
             this.labelDB.Name = "labelDB";
             this.labelDB.Size = new System.Drawing.Size(97, 23);
             this.labelDB.TabIndex = 2;
@@ -144,6 +145,7 @@ namespace awp
             this.groupBox1.Controls.Add(this.txtSV);
             this.groupBox1.Controls.Add(this.txtLD);
             this.groupBox1.Controls.Add(this.txtHost);
+            this.groupBox1.Controls.Add(this.buttonRefresh);
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.txtDB);
@@ -175,7 +177,7 @@ namespace awp
             // 
             this.labelUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.labelUser.ForeColor = System.Drawing.Color.Black;
-            this.labelUser.Location = new System.Drawing.Point(171, 41);
+            this.labelUser.Location = new System.Drawing.Point(185, 41);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(100, 23);
             this.labelUser.TabIndex = 2;
@@ -211,13 +213,34 @@ namespace awp
             this.txtHost.TabIndex = 2;
             this.txtHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.buttonRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
+            this.buttonRefresh.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.buttonRefresh.IconColor = System.Drawing.Color.Black;
+            this.buttonRefresh.IconSize = 30;
+            this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRefresh.Location = new System.Drawing.Point(375, 16);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Rotation = 0D;
+            this.buttonRefresh.Size = new System.Drawing.Size(113, 92);
+            this.buttonRefresh.TabIndex = 3;
+            this.buttonRefresh.Text = "Обновить";
+            this.buttonRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUser.ForeColor = System.Drawing.Color.Black;
-            this.txtUser.Location = new System.Drawing.Point(274, 39);
+            this.txtUser.Location = new System.Drawing.Point(288, 39);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(127, 23);
+            this.txtUser.Size = new System.Drawing.Size(100, 23);
             this.txtUser.TabIndex = 2;
             this.txtUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -225,7 +248,7 @@ namespace awp
             // 
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtSize.ForeColor = System.Drawing.Color.Black;
-            this.txtSize.Location = new System.Drawing.Point(277, 60);
+            this.txtSize.Location = new System.Drawing.Point(291, 60);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(63, 23);
             this.txtSize.TabIndex = 2;
@@ -235,7 +258,7 @@ namespace awp
             // 
             this.txtDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtDB.ForeColor = System.Drawing.Color.Black;
-            this.txtDB.Location = new System.Drawing.Point(262, 16);
+            this.txtDB.Location = new System.Drawing.Point(276, 16);
             this.txtDB.Name = "txtDB";
             this.txtDB.Size = new System.Drawing.Size(100, 23);
             this.txtDB.TabIndex = 2;
@@ -255,7 +278,7 @@ namespace awp
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(171, 62);
+            this.label3.Location = new System.Drawing.Point(185, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 23);
             this.label3.TabIndex = 2;
@@ -300,6 +323,7 @@ namespace awp
             this.groupBoxTime.TabIndex = 10;
             this.groupBoxTime.TabStop = false;
             this.groupBoxTime.Text = "Время";
+            this.groupBoxTime.Visible = false;
             // 
             // textBox2
             // 
@@ -339,6 +363,7 @@ namespace awp
             this.checkBoxTime.TabIndex = 6;
             this.checkBoxTime.Text = "Время:";
             this.checkBoxTime.UseVisualStyleBackColor = true;
+            this.checkBoxTime.Visible = false;
             this.checkBoxTime.CheckedChanged += new System.EventHandler(this.checkBoxTime_CheckedChanged);
             // 
             // groupBox3
@@ -425,6 +450,7 @@ namespace awp
             this.buttonPlan.Text = "Ок";
             this.buttonPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlan.UseVisualStyleBackColor = false;
+            this.buttonPlan.Click += new System.EventHandler(this.buttonPlan_Click);
             // 
             // buttonDump
             // 
@@ -465,6 +491,7 @@ namespace awp
             this.buttonRep.Text = "Создать отчет";
             this.buttonRep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRep.UseVisualStyleBackColor = true;
+            this.buttonRep.Click += new System.EventHandler(this.buttonRep_Click);
             // 
             // dgvStatus
             // 
@@ -531,6 +558,7 @@ namespace awp
 
         private FontAwesome.Sharp.IconButton buttonDump;
         private FontAwesome.Sharp.IconButton buttonPlan;
+        private FontAwesome.Sharp.IconButton buttonRefresh;
         private FontAwesome.Sharp.IconButton buttonRep;
         private FontAwesome.Sharp.IconButton buttonRestore;
         private System.Windows.Forms.CheckBox checkBoxTime;
