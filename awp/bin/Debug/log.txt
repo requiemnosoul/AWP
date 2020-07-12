@@ -1,0 +1,12 @@
+SET SOURCEDIR=E:\xampp\mysql\data\
+
+set hour=%TIME:~0,2%
+set minute=%TIME:~3,2%
+set second=%TIME:~6,2%
+set HHMMSS=%hour%-%minute%
+
+for /d %%i in (%SOURCEDIR%\*) do "E:\xampp\mysql\bin\mysqldump.exe" -uusername -hlocalhost -ppassword -c -n %%~ni | "c:\Program Files\7-Zip\7z.exe" a -tgzip -si"%%~ni_%DATE%_%HHMMSS%.sql" "D:\backups\data\%DATE%_%HHMMSS%\%%~ni.sql.gzip"
+
+eachfile.exe -purge -r -w -e -d 13 -l 0 -dir D:\backups\data\
+
+exit

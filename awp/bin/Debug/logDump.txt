@@ -1,0 +1,8 @@
+\name\                       \distrib\                  \system\                           \host\           \database\   \time\
+mysql_dump_20_06_2020.sql    MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    mysql        20.06.2020 7:32:14
+lr2_dump_20_06_2020.sql      MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    lr2          20.06.2020 7:43:26
+sys_dump_20_06_2020.sql      MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    sys          20.06.2020 20:28:45
+db_dump_21_06_2020.sql       MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    db           21.06.2020 0:17:58
+mysql_dump_21_06_2020.sql    MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    mysql        21.06.2020 0:46:42
+db_dump_21_06_2020.sql       MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.31.46    db           21.06.2020 0:47:08
+youdb_dump_22_06_2020.sql    MySQL dump 10.13 8.0.20    Microsoft Windows NT 6.2.9200.0    192.168.0.10     youdb        22.06.2020 12:41:24
