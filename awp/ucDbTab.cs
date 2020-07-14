@@ -97,7 +97,16 @@ namespace awp
 
         private void buttonRep_Click(object sender, EventArgs e)
         {
-            genRep();
+            try
+            {
+                genRep();
+                MessageBox.Show("Report created in root folder");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
         }
 
         private void buttonPlan_Click(object sender, EventArgs e)
